@@ -6,11 +6,11 @@ import store from './store'
 import router from './router'
 // 配置axios
 import axios from './axios.js'
-Vue.use(axios)
 import ElementUI from 'element-ui'
 // 引入element-ui组件
 import 'element-ui/lib/theme-chalk/index.css'
 // element-ui组件的样式需要单独引入
+Vue.use(axios)
 Vue.use(ElementUI)
 // 注册element组件
 Vue.config.productionTip = false

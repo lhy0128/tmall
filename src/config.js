@@ -4,7 +4,7 @@ module.exports = {
     port: 8081,
     open: true,
     before: app => {
-      app.get('/api/user',(req, res) =>{
+      app.get('/api/user', (req, res) => {
         res.json(user)
       })
     }
