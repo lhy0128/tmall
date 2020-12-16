@@ -12,12 +12,15 @@ var router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/home',
+      meta: { title: '首页' }
+      // meta设置页面头部标题，方便告诉用户当前显示的是哪一个页面
     },
     {
       path: '/home',
       component: Home,
-      name: 'HelloWorld'
+      name: 'HelloWorld',
+      meta: { title: '首页' }
     },
     {
       path: '/login',
@@ -48,19 +51,5 @@ var router = new Router({
   // 添加 mode: 'history' 之后将使用 HTML5 history 模式，该模式下没有 # 前缀，而且可以使用 pushState 和 replaceState 来管理记录。
   linkActiveClass: 'active'
 })
-router.beforeEach ((to, from, next) => {
-  const token = store.state.token
-  if (to.mata.requireAuth) {
-    if (token) {
-      next ()
-    } else {
-      console.log('login')
-      next ({
-        path: '/login'
-      })
-    }
-  } else {
-    next ()
-  }
-})
+
 export default router
