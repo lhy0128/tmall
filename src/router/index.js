@@ -28,7 +28,10 @@ var router = new Router({
     { path: '/shoppingcar',
       component: ShoppingCar,
       name: 'shoppingcar',
-      meta: { title: '购物车' }
+      meta: {
+        title: '购物车',
+        requireAuth: true
+      }
     },
     { path: '/register',
       component: Register,
@@ -44,5 +47,20 @@ var router = new Router({
   mode: 'history',
   // 添加 mode: 'history' 之后将使用 HTML5 history 模式，该模式下没有 # 前缀，而且可以使用 pushState 和 replaceState 来管理记录。
   linkActiveClass: 'active'
+})
+router.beforeEach ((to, from, next) => {
+  const token = store.state.token
+  if (to.mata.requireAuth) {
+    if (token) {
+      next ()
+    } else {
+      console.log('login')
+      next ({
+        path: '/login'
+      })
+    }
+  } else {
+    next ()
+  }
 })
 export default router
