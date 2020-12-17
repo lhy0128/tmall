@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Top></Top>
     <Serch></Serch>
     <Home></Home>
     <Carousel :imgList="imgList"></Carousel>
@@ -12,7 +11,6 @@
 import Home from '../view/topPart/HomePage'
 import Serch from '../view/headPart/Serch'
 import Carousel from '../view/show/Carousel'
-import Top from '../view/topPart/Top'
 import Details from '../view/show/Details'
 export default {
   name: 'HelloWorld',
@@ -29,7 +27,6 @@ export default {
     Home,
     Serch,
     Carousel,
-    Top,
     Details
   }
 }
