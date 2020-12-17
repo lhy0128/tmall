@@ -6,7 +6,7 @@ import ShoppingCar from '../view/topPart/ShoppingCar'
 import User from '../api/user'
 import Home from '../view/topPart/HomePage'
 // const Home = () => import('../components/HelloWorld')
-
+// 懒加载方式，当路由被访问的时候才加载对应组件
 Vue.use(Router)
 
 var router = new Router({
