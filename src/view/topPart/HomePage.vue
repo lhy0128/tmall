@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Serch></Serch>
-    <Options></Options>
+    <!-- <Serch></Serch> -->
     <Carousel :imgList="imgList"></Carousel>
     <Details></Details>
     <hr color="red">
