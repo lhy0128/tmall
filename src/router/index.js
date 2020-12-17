@@ -4,7 +4,7 @@ import Login from '../view/topPart/Login'
 import Register from '../view/topPart/Register'
 import ShoppingCar from '../view/topPart/ShoppingCar'
 import User from '../api/user'
-import Home from '../App.vue'
+import Home from '../view/topPart/HomePage'
 // const Home = () => import('../components/HelloWorld')
 
 Vue.use(Router)
