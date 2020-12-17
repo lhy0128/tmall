@@ -2,7 +2,7 @@
   <div>
     <div class="top">
       <div class="right" >
-        <router-link class="a" :to="{name:'/home'}">
+        <router-link class="a" :to="{name:'home'}">
           <span class="el-icon-s-home"></span>
           <span>首页</span>
         </router-link>

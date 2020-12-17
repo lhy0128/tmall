@@ -20,7 +20,7 @@ var router = new Router({
     {
       path: '/home',
       component: Home,
-      name: 'HelloWorld',
+      name: 'home',
       meta: { title: '首页' }
     },
     {

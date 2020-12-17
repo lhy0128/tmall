@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Serch></Serch>
     <Options></Options>
     <Carousel :imgList="imgList"></Carousel>
     <Details></Details>
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import Serch from '../headPart/Serch'
 import Options from './Options'
 import Carousel from '../show/Carousel'
 import Details from '../show/Details'
@@ -24,7 +26,8 @@ export default {
   components: {
     Options,
     Carousel,
-    Details
+    Details,
+    Serch
   }
 }
 </script>
