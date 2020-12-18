@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="block">
-    <el-carousel trigger="click" height="350px">
+    <el-carousel trigger="click" height="450px">
       <el-carousel-item v-for="item in imgList" :key="item.id">
         <img :src="item.src">
       </el-carousel-item>
@@ -19,7 +19,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .block{
-  width: 80%;
+  width: 100%;
   margin:0 auto;
 }
 img {

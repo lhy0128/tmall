@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Login from '../view/topPart/Login'
 import Register from '../view/topPart/Register'
 import ShoppingCar from '../view/topPart/ShoppingCar'
+import Details from './'
 const Home = () => import('../view/topPart/HomePage')
 // 懒加载方式，当路由被访问的时候才加载对应组件
 Vue.use(Router)
@@ -39,6 +40,11 @@ var router = new Router({
       component: Register,
       name: 'register',
       meta: { title: '注册' }
+    },
+    { path: '/details',
+      component: Details,
+      name: 'details',
+      meta: { title: '详情页' }
     }
   ],
   mode: 'history',
