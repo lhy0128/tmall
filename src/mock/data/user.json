@@ -1,6 +1,5 @@
 {
-  "table":{
-    "tableData3":[{
+    "user":[{
       "name": "lhy65",
       "password": "123456",
       "email":"105672!@1112"
@@ -14,10 +13,11 @@
       "name": "lhy5",
       "password": "125656",
       "email":"15622!@1112"
-    }]
-  },
-  "db":[{
+    }],
+    "db":[{
       "daly":"lhy<1005447927@qq.com>",
       "pass":"swsws"
   }]
+
+  
 }

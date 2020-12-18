@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:8081'
+axios.defaults.baseURL = 'http://localhost:3000'
 
 export const requseLogin = params => {
-  return axios.post('/login', params)
+  return axios.post('/users', params)
 }

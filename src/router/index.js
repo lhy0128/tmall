@@ -3,8 +3,7 @@ import Router from 'vue-router'
 import Login from '../view/topPart/Login'
 import Register from '../view/topPart/Register'
 import ShoppingCar from '../view/topPart/ShoppingCar'
-import Home from '../view/topPart/HomePage'
-// const Home = () => import('../components/HelloWorld')
+const Home = () => import('../view/topPart/HomePage')
 // 懒加载方式，当路由被访问的时候才加载对应组件
 Vue.use(Router)
 
@@ -52,19 +51,19 @@ router.beforeEach((to, from, next) => {
   }
   next()
 })
-// 访问之前，检查是否登陆了
-router.beforeEach((to, from, next) => {
-  if (to.path.startsWith('/login')) {
-    window.sessionStorage.removeItem('user')
-    next()
-  } else {
-    let token = window.sessionStorage.getItem('user')
-    if (!token) {
-      next({path: '/login'})
-    } else {
-      next()
-    }
-  }
-})
+// // 访问之前，检查是否登陆了
+// router.beforeEach((to, from, next) => {
+//   if (to.path.startsWith('/login')) {
+//     window.sessionStorage.removeItem('user')
+//     next()
+//   } else {
+//     let token = window.sessionStorage.getItem('user')
+//     if (!token) {
+//       next({path: '/login'})
+//     } else {
+//       next()
+//     }
+//   }
+// })
 
 export default router
