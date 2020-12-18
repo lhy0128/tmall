@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
     "mock": "json-server --watch src/mock/data/user.json",
-    "mockdev": "npm run mock & npm run dev"
+    "mockdev": "npm run dev"
   },
   "dependencies": {
     "axios": "^0.21.0",
