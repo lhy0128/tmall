@@ -29,9 +29,6 @@ export default {
       if (value === '') {
         callback(new Error('请输入密码'))
       } else {
-        if (this.ruleForm.checkPass !== '') {
-          this.$refs.ruleForm.validateField('checkPass')
-        }
         callback()
       }
     }
@@ -59,32 +56,41 @@ export default {
         if (valid) {
           this.logining = true
           let loginParams = {
-            username: this.account.username,
-            password: this.account.password
+            username: this.ruleForm.username,
+            password: this.ruleForm.password
           }
-           // 调用axios登录接口
-      requseLogin(loginParams).then(res => {
-       // debugger;
-       this.logining = false;
-       // 根据返回的code判断是否成功
-       let { code, msg, user } = res.data;
-       if (code === 200) {
-        // elementui中提示组件
-        this.$message({
-         type: 'success',
-         message: msg
-        })
-        // 登陆成功，用户信息就保存在sessionStorage中
-        sessionStorage.setItem('user', JSON.stringify(user));
-        // 跳转到后台主页面
-        console.log('this',this)
-        this.$router.push({ path: '/home' })
+          // 调用axios登录接口
+          requseLogin(loginParams).then(res => {
+            // debugger;
+            this.logining = false
+            // 根据返回的code判断是否成功
+            let { code, msg, user } = res.data
+            if (code === 200) {
+              // elementui中提示组件
+              this.$message({
+                type: 'success',
+                message: msg
+              })
+              // 登陆成功，用户信息就保存在sessionStorage中
+              sessionStorage.setItem('user', JSON.stringify(user))
+              // 跳转到后台主页面
+              console.log('this', this)
+              this.$router.push({ path: '/home' })
+            } else {
+              this.$message({
+                type: 'success',
+                message: msg
+              })
+            }
+          }).catch(err => {
+            console.log(err)
+          })
         } else {
-          console.log('error submit!!')
+          console.log('error sublmit!')
           return false
         }
       })
-    }
+    },
     resetForm (formName) {
       this.$refs[formName].resetFields()
     }

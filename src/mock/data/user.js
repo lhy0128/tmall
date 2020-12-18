@@ -1,7 +1,6 @@
 /*
 * 用来存放一些模拟用户的数据
 * */
- 
 // import Mock from 'mockjs'
 const users = [
   {
