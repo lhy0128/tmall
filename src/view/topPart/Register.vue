@@ -1,7 +1,15 @@
 <template>
-<div class="all">
-  <div class="left">
-    <img src="@/assets/registerl.png" alt="">
+<div>
+  <div class="login-banner-wrap">
+    <div class="login-banner">
+        <div class="login-banner-content">
+            <div class="login-banner-center">
+                <span>独家礼遇 会员尊享</span>
+                <h1>悦享爱意，报以时光</h1>
+                <h2 class="DW-font-book">SHARE LOVE RETURN IN TIME</h2>
+            </div>
+        </div>
+    </div>
   </div>
   <div class="right">
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
@@ -117,10 +125,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.all{
-  margin-top: 10%;
-  width: 100%;
-}
 .left{
   float: left;
   width: 50%;
@@ -128,5 +132,16 @@ export default {
 .right{
   float: left;
   width: 30%;
+}
+.login-banner-center {
+    width: 325px;
+    /* -webkit-transform: translateY(-50%); */
+    transform: translateY(-50%);
+    color: #fff;
+    position: absolute;
+    left: auto;
+    right: 30px;
+    top: 50%;
+    bottom: auto;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <Serch></Serch> -->
-    <Carousel :imgList="imgList"></Carousel>
+    <Carousel :imgList="imgList" :fesimg="fesimg"></Carousel>
     <Card :title="title"></Card>
     <Card :title="title"></Card>
     <hr color="red">
@@ -23,7 +23,13 @@ export default {
         {id: 3, src: require('../../assets/banner/banner3.jpg')},
         {id: 4, src: require('../../assets/banner/banner4.jpg')}
       ],
-      title: '节日甄选'
+      title: '节日甄选',
+      fesimg: [
+        {id: 1, src: require('../../assets/festival/fes1.png')},
+        {id: 2, src: require('../../assets/festival/fes2.png')},
+        {id: 3, src: require('../../assets/festival/fes3.png')},
+        {id: 4, src: require('../../assets/festival/fes4.png')}
+      ]
     }
   },
   components: {

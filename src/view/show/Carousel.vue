@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="block">
-    <el-carousel trigger="click" height="450px">
+    <el-carousel trigger="click" height="550px">
       <el-carousel-item v-for="item in imgList" :key="item.id">
         <img :src="item.src">
       </el-carousel-item>

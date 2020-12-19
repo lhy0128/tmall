@@ -1,18 +1,18 @@
 <template>
-  <div>
+  <div class="header_container">
      <el-menu
-  class="el-menu-demo"
   mode="horizontal"
   background-color="#545c64"
   text-color="#fff"
   active-text-color="#ffd04b">
   <el-menu-item index="1">
     <router-link class="a" :to="{name:'home'}">
-      <span class="el-icon-s-home"></span>
-      <span>首页</span>
+      <span >
+        <img src="../assets/dw-logo.png" alt="">
+      </span>
     </router-link></el-menu-item>
   <el-submenu index="2">
-    <template slot="title">所有产品分类</template>
+    <template slot="title">全新上市</template>
     <el-menu-item index="2-1">美容洗护</el-menu-item>
     <el-menu-item index="2-2">进口食品</el-menu-item>
     <el-menu-item index="2-3">粮油副食</el-menu-item>
@@ -31,31 +31,33 @@
       <el-menu-item index="2-8-7">糖果/巧克力</el-menu-item>
     </el-submenu>
   </el-submenu>
-  <el-menu-item index="3" >企业采购</el-menu-item>
-  <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-  <el-menu-item index="5" >
-    <router-link class="a" :to="{name:'login'}">
-      <span>你好，请登录</span>
-    </router-link>
-  </el-menu-item>
-  <el-menu-item index="6" >
-    <router-link class="a" :to="{name:'register'}">
-      <span>免费注册</span>
-    </router-link>
-  </el-menu-item>
-  <el-menu-item index="7" >
-    <span>我的淘宝</span>
-    <span class="el-icon-caret-bottom"></span>
-  </el-menu-item>
+  <el-menu-item index="3" >腕表</el-menu-item>
+  <el-menu-item index="4" >饰品</el-menu-item>
+  <el-menu-item index="5" >系列</el-menu-item>
+  <el-menu-item index="6" >礼品套装</el-menu-item>
+  <el-menu-item index="7" >表带</el-menu-item>
+  <el-menu-item index="8" >穿搭灵感</el-menu-item>
+  <el-menu-item index="9" >查找门店</el-menu-item>
+  <el-menu-item index="10" >探索DW</el-menu-item>
+  <el-submenu index="5">
+    <template slot="title" ><span class="el-icon-user"></span></template>
+    <el-menu-item index="5-1">
+      <p>已是DW会员？</p>
+    </el-menu-item>
+    <el-menu-item index="5-2">
+      <router-link class="a" :to="{name:'login'}">
+        <el-button type="primary" size="small">登录</el-button>
+      </router-link></el-menu-item>
+    <el-menu-item index="5-3">
+      <router-link class="a" :to="{name:'register'}">
+       <span>注册</span>
+      </router-link></el-menu-item>
+  </el-submenu>
   <el-menu-item index="8" >
     <router-link class="a" :to="{name:'shoppingcar'}">
       <span class="el-icon-shopping-cart-full"></span>
       <span>购物车</span>
     </router-link>
-  </el-menu-item>
-  <el-menu-item index="9" >
-    <span>收藏夹</span>
-        <span class="el-icon-caret-bottom"></span>
   </el-menu-item>
 </el-menu>
   </div>
@@ -71,10 +73,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.a{
+ .a{
     text-decoration: none;
+    color:#fff;
 }
 span{
-    margin-right: 5px;
+    margin-right: 3px;
+}
+.header_container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 10;
 }
 </style>

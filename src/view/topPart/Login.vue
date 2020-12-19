@@ -1,7 +1,15 @@
 <template>
 <div class="all">
-  <div class="left">
-    <img src="@/assets/registerl.png" alt="">
+  <div class="login-banner-wrap">
+    <div class="login-banner">
+        <div class="login-banner-content">
+            <div class="login-banner-center">
+                <span>独家礼遇 会员尊享</span>
+                <h1>悦享爱意，报以时光</h1>
+                <h2 class="DW-font-book">SHARE LOVE RETURN IN TIME</h2>
+            </div>
+        </div>
+    </div>
   </div>
   <div class="right">
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
@@ -59,11 +67,15 @@ export default {
             username: this.ruleForm.username,
             password: this.ruleForm.password
           }
+          console.log(loginParams.username)
           requseLogin(loginParams).then(res => {
             this.logining = false
-            // console.log(res.username)
-            let { code, msg, user } = res.data
-            if (code === 200) {
+            console.log(res)
+            let user = res.data
+            let msg = res.request.statusText
+            let status = res.request.status
+            // let { status, msg, user } = config.data // status
+            if (status === 200) {
               this.$message({
                 type: 'success',
                 message: msg

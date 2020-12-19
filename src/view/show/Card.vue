@@ -5,7 +5,7 @@
         <el-row class="float">
           <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
             <el-card shadow="hover" :body-style="{ padding: '0px' }">
-            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+            <img :src="require('../../assets/festival/fes4.png')" width="100%" >
             <div style="padding: 10px;">
               <p>HHHHHH</p>
               <p>11111</p>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  props: ['title']
+  props: ['title', 'fesimg']
 }
 </script>
 
