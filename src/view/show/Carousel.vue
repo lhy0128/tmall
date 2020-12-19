@@ -3,7 +3,7 @@
     <div class="block">
     <el-carousel trigger="click" height="550px">
       <el-carousel-item v-for="item in imgList" :key="item.id">
-        <img :src="item.src">
+        <img :src="item.src" height="100%">
       </el-carousel-item>
     </el-carousel>
   </div>

@@ -73,7 +73,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- .a{
+.a{
     text-decoration: none;
     color:#fff;
 }

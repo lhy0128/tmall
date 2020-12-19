@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Login from '../view/topPart/Login'
 import Register from '../view/topPart/Register'
 import ShoppingCar from '../view/topPart/ShoppingCar'
-import Details from './'
+import Details from '../view/show/Details'
 
 import store from '../store/index'
 const Home = () => import('../view/topPart/HomePage')

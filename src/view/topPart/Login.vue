@@ -1,14 +1,11 @@
 <template>
 <div class="all">
-  <div class="login-banner-wrap">
-    <div class="login-banner">
-        <div class="login-banner-content">
-            <div class="login-banner-center">
-                <span>独家礼遇 会员尊享</span>
-                <h1>悦享爱意，报以时光</h1>
-                <h2 class="DW-font-book">SHARE LOVE RETURN IN TIME</h2>
-            </div>
-        </div>
+  <div class="back">
+    <img src="../../assets/scaner/scaner2.jpg" style="height:100%">
+    <div class="center">
+        <span>独家礼遇 会员尊享</span>
+        <h1>悦享爱意，报以时光</h1>
+        <h2 class="DW-font-book">SHARE LOVE RETURN IN TIME</h2>
     </div>
   </div>
   <div class="right">
@@ -108,16 +105,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.all{
-  margin-top: 10%;
-  width: 100%;
-}
 .left{
   float: left;
   width: 50%;
 }
 .right{
-  float: left;
+  margin-top: 4%;
   width: 30%;
+  margin-left:35%;
+}
+.back{
+  background: url('');
+  width: 100%;
+  height: 500px;
+  z-index: 1;
+}
+.center{
+  position:absolute;
+  top: 250px;
+  left: 1000px;
+  width: 100%;
+  z-index: 2;
 }
 </style>

@@ -5,12 +5,14 @@
         <el-row class="float">
           <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
             <el-card shadow="hover" :body-style="{ padding: '0px' }">
-            <img :src="require('../../assets/festival/fes4.png')" width="100%" >
-            <div style="padding: 10px;">
-              <p>HHHHHH</p>
-              <p>11111</p>
-              <p>#999</p>
-            </div>
+              <router-link class="a" :to="{name:'details'}">
+                <img :src="require('../../assets/festival/fes4.png')" width="100%" >
+                <div style="padding: 10px;">
+                  <p>HHHHHH</p>
+                  <p>11111</p>
+                  <p>#999</p>
+                </div>
+              </router-link>
             </el-card>
           </el-col>
         </el-row>
@@ -33,6 +35,10 @@ export default {
 .image {
   width: 100%;
   display: block;
+}
+.a{
+    text-decoration: none;
+    color:rgb(10, 10, 10);
 }
 .p{
   margin: 30px;
