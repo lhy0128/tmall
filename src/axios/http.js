@@ -2,10 +2,8 @@
 import axios from 'axios'
 // 引入qs
 import qs from 'qs'
-// 引入配置文件
-import conf from './config.js'
-const {
-    baseURL, token } = conf;
+
+const { baseURL, token } = conf;
 // 创建实例
 const instance = axios.create({
   baseURL: baseURL,

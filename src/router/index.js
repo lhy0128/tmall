@@ -4,6 +4,8 @@ import Login from '../view/topPart/Login'
 import Register from '../view/topPart/Register'
 import ShoppingCar from '../view/topPart/ShoppingCar'
 import Details from './'
+
+import store from '../store/index'
 const Home = () => import('../view/topPart/HomePage')
 // 懒加载方式，当路由被访问的时候才加载对应组件
 Vue.use(Router)
@@ -57,19 +59,20 @@ router.beforeEach((to, from, next) => {
   }
   next()
 })
-// // 访问之前，检查是否登陆了
-// router.beforeEach((to, from, next) => {
-//   if (to.path.startsWith('/login')) {
-//     window.sessionStorage.removeItem('user')
-//     next()
-//   } else {
-//     let token = window.sessionStorage.getItem('user')
-//     if (!token) {
-//       next({path: '/login'})
-//     } else {
-//       next()
-//     }
-//   }
-// })
-
+// 注册全局钩子用来拦截导航
+router.beforeEach((to, from, next) => {
+  const token = store.state.token
+  if (to.meta.requireAuth) {
+    if (token) {
+      next()
+    } else {
+      console.log('该页面需要登陆')
+      next({
+        path: '/login'
+      })
+    }
+  } else {
+    next()
+  }
+})
 export default router

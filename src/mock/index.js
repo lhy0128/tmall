@@ -20,25 +20,21 @@ export default {
       // 解析axios传过来的数据
       let { username, password } = JSON.parse(config.data)
       return new Promise((resolve, reject) => {
-        // 先创建一个用户为空对象
         let user = null
         setTimeout(() => {
           // 判断模拟的假数据中是否有和传过来的数据匹配的
           let hasUser = users.some(person => {
-            // 如果存在这样的数据
             if (person.username === username && person.password === password) {
               user = JSON.parse(JSON.stringify(person))
               user.password = undefined
               return true
             } else {
-              // 如果没有这个person
               return false
             }
           })
-          // 如果有那么一个人
           if (hasUser) {
             resolve([ 200, {code: 200, msg: '登录成功', user} ])
-          } else { // 如果没有这么一个人
+          } else {
             resolve([200, { code: 500, msg: '账号错误' }])
           }
         }, 500)
