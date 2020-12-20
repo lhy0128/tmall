@@ -23,19 +23,19 @@
       "msg":"",
       "data":[{
         "id":"1",
-        "img":"https://gw.alicdn.com/imgextra/i3/O1CN01iMXs4L1x0XwJDYNna_!!6000000006381-0-tps-750-291.jpg_Q90.jpg"
+        "src":"https://gw.alicdn.com/imgextra/i3/O1CN01iMXs4L1x0XwJDYNna_!!6000000006381-0-tps-750-291.jpg_Q90.jpg"
       },
       {
         "id":"2",
-        "img":"C:/Users/lhy/OneDrive/桌面/学科作业资料/web高级技术/Project2020/tmallfood/src/assets/banner/banner2.jpg"
+        "src":"C:/Users/lhy/OneDrive/桌面/学科作业资料/web高级技术/Project2020/tmallfood/src/assets/banner/banner2.jpg"
       },
       {
         "id":"3",
-        "img":"C:/Users/lhy/OneDrive/桌面/学科作业资料/web高级技术/Project2020/tmallfood/src/assets/banner/banner3.jpg"
+        "src":"C:/Users/lhy/OneDrive/桌面/学科作业资料/web高级技术/Project2020/tmallfood/src/assets/banner/banner3.jpg"
       },
       {
         "id":"4",
-        "img":"C:/Users/lhy/OneDrive/桌面/学科作业资料/web高级技术/Project2020/tmallfood/src/assets/banner/banner4.jpg"
+        "src":"C:/Users/lhy/OneDrive/桌面/学科作业资料/web高级技术/Project2020/tmallfood/src/assets/banner/banner4.jpg"
       }
     ]
     }

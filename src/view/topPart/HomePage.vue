@@ -32,14 +32,13 @@ export default {
       ]
     }
   },
-  created () {
-    this.getImgList()
-  },
   methods: {
     getImgList () {
+      alert('111')
       this.$indicator.open({
         text: '加载中'
       })
+      alert('jiazai')
       this.$http.get('imglist').then(res => {
         this.$indicator.close()
         if (res.data.code === 0) {
@@ -49,6 +48,10 @@ export default {
         }
       })
     }
+  },
+  created () {
+    alert('开始执行')
+    this.getImgList()
   },
   components: {
     Options,
