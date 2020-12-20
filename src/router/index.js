@@ -4,7 +4,7 @@ import Login from '../view/topPart/Login'
 import Register from '../view/topPart/Register'
 import ShoppingCar from '../view/topPart/ShoppingCar'
 import Details from '../view/show/Details'
-
+import Pay from '../view/pages/Pay.vue'
 import store from '../store/index'
 const Home = () => import('../view/topPart/HomePage')
 // 懒加载方式，当路由被访问的时候才加载对应组件
@@ -35,7 +35,7 @@ var router = new Router({
       name: 'shoppingcar',
       meta: {
         title: '购物车',
-        requireAuth: true
+        // requireAuth: true
       }
     },
     { path: '/register',
@@ -47,6 +47,11 @@ var router = new Router({
       component: Details,
       name: 'details',
       meta: { title: '详情页' }
+    },
+    { path: '/pay',
+      component: Pay,
+      name: 'pay',
+      meta: { title: '支付页' }
     }
   ],
   mode: 'history',

@@ -105,10 +105,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.left{
-  float: left;
-  width: 50%;
-}
 .right{
   margin-top: 4%;
   width: 30%;

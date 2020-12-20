@@ -12,12 +12,12 @@ const portfinder = require('portfinder')
 
 
 
-const express = require('express')
-const app = express()
-var appdata = require('../src/user.json')
-var user = appdata.data
-var apiRoutes = express.Router()  // 获取一个 express 的路由实例
-app.use('/api', apiRoutes)
+// const express = require('express')
+// const app = express()
+// var appdata = require('../src/user.json')
+// var user = appdata.data
+// var apiRoutes = express.Router()  // 获取一个 express 的路由实例
+// app.use('/api', apiRoutes)
 
 
 const HOST = process.env.HOST
@@ -32,15 +32,15 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
-    before(app) {
-      app.get('/api/user', (req, res) => {
-        res.json({
-          name: 'lhy',
-          password:'123456',
-          data: user
-        })//接口返回json数据，上面配置的数据seller就赋值给data请求后调用
-      })
-    },
+    // before(app) {
+    //   app.get('/api/user', (req, res) => {
+    //     res.json({
+    //       name: 'lhy',
+    //       password:'123456',
+    //       data: user
+    //     })//接口返回json数据，上面配置的数据seller就赋值给data请求后调用
+    //   })
+    // },
 
     clientLogLevel: 'warning',
     historyApiFallback: {

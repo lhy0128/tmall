@@ -14,9 +14,11 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "element-china-area-data": "^5.0.2",
     "element-ui": "^2.14.1",
     "mockjs": "^1.1.0",
     "qs": "^6.9.4",
+    "sweetalert": "^2.1.2",
     "vue": "^2.5.2",
     "vue-axios": "^3.2.0",
     "vue-router": "^3.0.1",

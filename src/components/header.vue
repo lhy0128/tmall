@@ -39,7 +39,7 @@
   <el-menu-item index="8" >穿搭灵感</el-menu-item>
   <el-menu-item index="9" >查找门店</el-menu-item>
   <el-menu-item index="10" >探索DW</el-menu-item>
-  <el-submenu index="5">
+  <el-submenu index="11">
     <template slot="title" ><span class="el-icon-user"></span></template>
     <el-menu-item index="5-1">
       <p>已是DW会员？</p>
@@ -53,7 +53,7 @@
        <span>注册</span>
       </router-link></el-menu-item>
   </el-submenu>
-  <el-menu-item index="8" >
+  <el-menu-item index="12" >
     <router-link class="a" :to="{name:'shoppingcar'}">
       <span class="el-icon-shopping-cart-full"></span>
       <span>购物车</span>
