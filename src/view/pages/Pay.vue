@@ -82,101 +82,101 @@
   </div>
 </template>
 <script>
-import swal from 'sweetalert';
-import { CodeToText } from 'element-china-area-data';
+import swal from 'sweetalert'
+import { CodeToText } from 'element-china-area-data'
 // import Location from '../components/Location.vue';
 export default {
   components: {
     // Location
   },
-  data() {
+  data () {
     return {
       express: '邮政快递',
       expressOptions: ['邮政快递', '中通快递', '圆通快递', '韵达快递'],
       items: [],
-      areaDetail: '',
-    };
+      areaDetail: ''
+    }
   },
   methods: {
-    submitBill() {
-      const address = JSON.parse(localStorage.getItem('address'));
-      let addressText = '';
-      let productText = '';
+    submitBill () {
+      const address = JSON.parse(localStorage.getItem('address'))
+      let addressText = ''
+      let productText = ''
       for (let i = 0; i < address.length; i += 1) {
-        addressText += CodeToText[address[i]];
+        addressText += CodeToText[address[i]]
       }
       for (let i = 0; i < this.items.length; i += 1) {
-        productText += `${i + 1}:`;
-        productText += this.items[i].name;
+        productText += `${i + 1}:`
+        productText += this.items[i].name
         for (let j = 0; j < this.items[i].property.length; j += 1) {
-          productText += this.items[i].property[j];
+          productText += this.items[i].property[j]
         }
-        productText += '<br/>';
+        productText += '<br/>'
       }
-      const htmlText = `快递：${this.express}<br/>金额：${this.checkedMoney}元<br/>${productText}地址：${addressText}${this.areaDetail}`;
-      const span = document.createElement('span');
-      span.innerHTML = htmlText;
-      const username = localStorage.getItem('user');
+      const htmlText = `快递：${this.express}<br/>金额：${this.checkedMoney}元<br/>${productText}地址：${addressText}${this.areaDetail}`
+      const span = document.createElement('span')
+      span.innerHTML = htmlText
+      const username = localStorage.getItem('user')
       if (username === '' || username === null) {
         swal('提示', '请先登录再结算！', 'error').then(() => {
-          this.$router.push('/login');
-        });
-        return;
+          this.$router.push('/login')
+        })
+        return
       }
       swal({
         title: '支付成功',
         icon: 'success',
         content: span,
-        showCloseButton: true,
+        showCloseButton: true
       }).then(() => {
         // 清除购物车里已被购买的商品,及订单
-        const order = JSON.parse(localStorage.getItem('order'));
-        const cart = JSON.parse(localStorage.getItem('cart'));
+        const order = JSON.parse(localStorage.getItem('order'))
+        const cart = JSON.parse(localStorage.getItem('cart'))
         for (let i = 0; i < order.length; i += 1) {
           if (order[i] === true) {
-            order.splice(i, 1);
-            cart.splice(i, 1);
-            i -= 1;
+            order.splice(i, 1)
+            cart.splice(i, 1)
+            i -= 1
           }
         }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        localStorage.removeItem('address');
-        localStorage.removeItem('order');
-        this.$router.go(-1);
+        localStorage.setItem('cart', JSON.stringify(cart))
+        localStorage.removeItem('address')
+        localStorage.removeItem('order')
+        this.$router.go(-1)
         // end
-      });
+      })
     },
-    getAddress(res) {
-      this.addressText = res;
-    },
-  },
-  computed: {
-    checkedCount() {
-      let count = 0;
-      for (let i = 0; i < this.items.length; i += 1) {
-        count += this.items[i].count;
-      }
-      return count;
-    },
-    checkedMoney() {
-      let countMoney = 0;
-      for (let i = 0; i < this.items.length; i += 1) {
-        countMoney += this.items[i].count * this.items[i].price;
-      }
-      return countMoney;
-    },
-  },
-  created() {
-    // 检查是否有需要结算的
-    const cart = JSON.parse(localStorage.getItem('cart'));
-    const choosed = JSON.parse(localStorage.getItem('order'));
-    for (let i = 0; i < cart.length; i += 1) {
-      if (choosed[i] === true) {
-        this.items.push(cart[i]);
-      }
+    getAddress (res) {
+      this.addressText = res
     }
   },
-};
+  computed: {
+    checkedCount () {
+      let count = 0
+      for (let i = 0; i < this.items.length; i += 1) {
+        count += this.items[i].count
+      }
+      return count
+    },
+    checkedMoney () {
+      let countMoney = 0
+      for (let i = 0; i < this.items.length; i += 1) {
+        countMoney += this.items[i].count * this.items[i].price
+      }
+      return countMoney
+    }
+  },
+  created () {
+    // 检查是否有需要结算的
+    const cart = JSON.parse(localStorage.getItem('cart'))
+    const choosed = JSON.parse(localStorage.getItem('order'))
+    for (let i = 0; i < cart.length; i += 1) {
+      if (choosed[i] === true) {
+        this.items.push(cart[i])
+      }
+    }
+  }
+}
 </script>
 <style scoped>
 .tab{

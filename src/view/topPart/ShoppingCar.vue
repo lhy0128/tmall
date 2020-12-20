@@ -72,7 +72,7 @@
 <script>
 export default {
   name: 'shoppingcar',
-  data() {
+  data () {
     return {
       num: '',
       sumprice: 0,
@@ -98,10 +98,10 @@ export default {
         }
       ]
     }
-},
+  },
   methods: {
     deletecom: function (index) {
-      this.commodit.splice(index ,1)
+      this.commodit.splice(index,1)
       this.counted ()
     },
     // 现存问题：移除购物车中的商品的时候，价格不会减少，始终是一开始或者加数量后的

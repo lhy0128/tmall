@@ -77,7 +77,6 @@
         </el-tab-pane>
       </el-tabs>
     </div>
-    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
   </div>
 </template>
 
@@ -107,7 +106,7 @@ export default {
         {id: 3, src: require('../../assets/match/match3.jpg')},
         {id: 4, src: require('../../assets/match/match4.jpg')}
       ],
-      express:'红色',
+      express: '红色',
       expressOptions: ['红色', '蓝色']
     }
   },

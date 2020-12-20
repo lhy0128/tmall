@@ -35,7 +35,7 @@ var router = new Router({
       name: 'shoppingcar',
       meta: {
         title: '购物车',
-        // requireAuth: true
+        requireAuth: true
       }
     },
     { path: '/register',

@@ -18,10 +18,10 @@ export default {
   data () {
     return {
       imgList: [
-        {id: 1, src: require('../../assets/banner/banner1.jpg')},
-        {id: 2, src: require('../../assets/banner/banner2.jpg')},
-        {id: 3, src: require('../../assets/banner/banner3.jpg')},
-        {id: 4, src: require('../../assets/banner/banner4.jpg')}
+        // {id: 1, src: require('../../assets/banner/banner1.jpg')},
+        // {id: 2, src: require('../../assets/banner/banner2.jpg')},
+        // {id: 3, src: require('../../assets/banner/banner3.jpg')},
+        // {id: 4, src: require('../../assets/banner/banner4.jpg')}
       ],
       title: '节日甄选',
       fesimg: [
@@ -32,12 +32,31 @@ export default {
       ]
     }
   },
+  created () {
+    this.getImgList()
+  },
+  methods: {
+    getImgList () {
+      this.$indicator.open({
+        text: '加载中'
+      })
+      this.$http.get('imglist').then(res => {
+        this.$indicator.close()
+        if (res.data.code === 0) {
+          this.$toast('加载轮播图失败')
+        } else {
+          this.imgList = res.data.data
+        }
+      })
+    }
+  },
   components: {
     Options,
     Carousel,
     Card,
     Serch
   }
+
 }
 </script>
 

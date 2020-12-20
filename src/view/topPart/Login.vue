@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { requseLogin } from '@/axios/api.js'
+import swal from 'sweetalert'
 export default {
   name: 'login',
   data () {
@@ -39,8 +39,8 @@ export default {
     }
     return {
       ruleForm: {
-        username: '',
-        password: ''
+        username: 'admin',
+        password: '1111'
       },
       rules: {
         username: [
@@ -59,39 +59,10 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.logining = true
-          let loginParams = {
-            username: this.ruleForm.username,
-            password: this.ruleForm.password
-          }
-          console.log(loginParams.username)
-          requseLogin(loginParams).then(res => {
-            this.logining = false
-            console.log(res)
-            let user = res.data
-            let msg = res.request.statusText
-            let status = res.request.status
-            // let { status, msg, user } = config.data // status
-            if (status === 200) {
-              this.$message({
-                type: 'success',
-                message: msg
-              })
-              // 登陆成功，避免刷新后无登录信息
-              sessionStorage.setItem('user', JSON.stringify(user))
-              console.log('this', this)
-              this.$router.push({ path: '/home' })
-            } else {
-              this.$message({
-                type: 'success',
-                message: msg
-              })
-            }
-          }).catch(err => {
-            console.log(err)
-          })
+          this.$router.push('/')
+          localStorage.setItem('user', this.login.username)
         } else {
-          console.log('error sublmit!')
+          swal('提示', '验证失败', 'error')
           return false
         }
       })
@@ -105,6 +76,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* .all{
+  overflow-x: hidden;
+  width: 100%;
+} */
 .right{
   margin-top: 4%;
   width: 30%;
@@ -112,7 +87,7 @@ export default {
 }
 .back{
   background: url('');
-  width: 100%;
+  /* width: 100%; */
   height: 500px;
   z-index: 1;
 }
@@ -123,4 +98,5 @@ export default {
   width: 100%;
   z-index: 2;
 }
+
 </style>
