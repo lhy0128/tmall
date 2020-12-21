@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import swal from 'sweetalert'
+import { requseLogin } from '@/axios/api.js'
 export default {
   name: 'login',
   data () {
@@ -39,8 +39,8 @@ export default {
     }
     return {
       ruleForm: {
-        username: 'admin',
-        password: '1111'
+        username: '',
+        password: ''
       },
       rules: {
         username: [
@@ -59,10 +59,54 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$router.push('/')
-          localStorage.setItem('user', this.login.username)
+          this.logining = true
+          let loginParams = {
+            username: this.ruleForm.username,
+            password: this.ruleForm.password
+          }
+          // console.log(loginParams.username)
+          requseLogin(loginParams).then(res => {
+            this.logining = false
+            console.log(res)
+            var users = JSON.parse(res.request.responseText)
+            console.log(users)
+            // let users = res.request.responseText
+            // console.log(users)
+            // let passwords = res.request.response.password
+            let msg = res.request.statusText
+            let status = res.request.status
+            // let { status, msg, user } = config.data // status
+            if (status === 200) {
+              for (let index in users) {
+                console.log(users[index].name)
+                if (users[index].name === loginParams.username && users[index].password === loginParams.password) {
+                  this.$message({
+                    type: 'success',
+                    message: msg
+                  })
+                  // 登陆成功，避免刷新后无登录信息
+                  // sessionStorage.setItem('token', res.data.token)
+                  sessionStorage.setItem('users[index]', JSON.stringify(users))
+                  console.log('this', this)
+                  // alert(usernames)
+                  this.$router.push({ path: '/home' })
+                  this.logining = true
+                }
+              }
+              if (this.logining === false) {
+                alert('账号或者密码错误')
+              }
+            } else {
+              this.$message({
+                type: 'error',
+                message: msg
+              })
+            }
+          }).catch(err => {
+            console.log(err)
+          })
         } else {
-          swal('提示', '验证失败', 'error')
+          console.log('error sublmit!')
           return false
         }
       })

@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { requseimgList } from '@/axios/api.js'
 import Serch from '../headPart/Serch'
 import Options from './Options'
 import Carousel from '../show/Carousel'
@@ -32,26 +33,27 @@ export default {
       ]
     }
   },
+  created () {
+    this.getImgList()
+  },
   methods: {
     getImgList () {
-      alert('111')
-      this.$indicator.open({
-        text: '加载中'
-      })
-      alert('jiazai')
-      this.$http.get('imglist').then(res => {
-        this.$indicator.close()
+      requseimgList().then(res => {
+        // console.log(res)
+        var imgList = JSON.parse(res.request.responseText)
+        let imgLists = imgList.data
+        // console.log(imgLists)
         if (res.data.code === 0) {
-          this.$toast('加载轮播图失败')
+          alert('图片加载失败')
         } else {
-          this.imgList = res.data.data
+          for (let index in imgLists) {
+            this.imgList[index] = imgLists[index]
+            // console.log(this.imgList[index].src)
+          }
         }
       })
+      console.log(this.imgList)
     }
-  },
-  created () {
-    alert('开始执行')
-    this.getImgList()
   },
   components: {
     Options,
@@ -59,7 +61,6 @@ export default {
     Card,
     Serch
   }
-
 }
 </script>
 

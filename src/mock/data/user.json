@@ -27,7 +27,7 @@
       },
       {
         "id":"2",
-        "src":"C:/Users/lhy/OneDrive/桌面/学科作业资料/web高级技术/Project2020/tmallfood/src/assets/banner/banner2.jpg"
+        "src":"require('../../assets/banner/banner1.jpg')"
       },
       {
         "id":"3",
@@ -38,7 +38,95 @@
         "src":"C:/Users/lhy/OneDrive/桌面/学科作业资料/web高级技术/Project2020/tmallfood/src/assets/banner/banner4.jpg"
       }
     ]
-    }
+    },
+    "product":[{
+      "id":"1",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"2",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"3",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"4",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"5",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"6",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"7",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"8",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"9",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"10",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    },
+    {
+      "id":"11",
+      "name":"PETITE ROSELYN",
+      "price":1090,
+      "color":"#ccc",
+      "size":"默认",
+      "imgName":"1.jpg"
+    }]
 
   
 }
