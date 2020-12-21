@@ -2,7 +2,7 @@
   <div class="header_container">
      <el-menu
   mode="horizontal"
-  background-color="#545c64"
+  background-color="#192638"
   text-color="#fff"
   active-text-color="#ffd04b">
   <el-menu-item index="1">

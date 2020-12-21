@@ -68,82 +68,15 @@
 </template>
 
 <script>
+// import { updateProductNum } from '../../store/modules/shoppingCar'
 export default {
   name: 'shoppingcar',
   data () {
     return {
-      num: '',
-      sumprice: 0,
-      checkedAll: false,
-      commodit: [
-        {
-          name: 'iPhone 11 Pro',
-          price: 6188,
-          num: 1,
-          checked: false
-        },
-        {
-          name: 'iPad Pro',
-          price: 8699,
-          num: 1,
-          checked: false
-        },
-        {
-          name: 'MacBook Pro',
-          price: 11622,
-          num: 1,
-          checked: false
-        }
-      ]
+      productList: {}
     }
   },
   methods: {
-    deletecom: function (index) {
-      this.commodit.splice(index,1)
-      this.counted ()
-    },
-    // 现存问题：移除购物车中的商品的时候，价格不会减少，始终是一开始或者加数量后的
-    // 怎么才能让点击移除按钮的时候即调用该函数
-    // 尝试把counted函数加在点击之后，发现还是不行
-    counted: function () {
-      var totalPrice = 0// 临时总价
-      this.commodit.forEach(function (val, index) {
-        if (val.checked !== false)
-          totalPrice += val.num * val.price// 累计总价
-      })
-      this.sumprice = parseFloat(totalPrice)
-    },
-    // 现存问题，不管是单选还是全选按钮，都要点击两次才行
-    // danxuan
-    check: function (index) {
-      if (this.commodit[index].checked === false) {
-        this.commodit[index].checked = true
-      } else {
-        this.commodit[index].checked = false
-        this.checkedAll = false
-      }
-      this.counted ()
-    },
-    // 全选框
-    checkAll (commodit) {
-      if (this.checkedAll === false) {
-        for (var i = 0; i < this.commodit.length; i++) {
-          var commodit = this.commodit[i]
-          commodit.checked = true
-        }
-        this.counted ()
-      } else {
-        for (var i = 0; i < this.commodit.length; i++) {
-          var commodit = this.commodit[i]
-          commodit.checked = false
-        }
-      }
-      this.checkedAll = !this.checkedAll
-      this.counted ()
-    }
-  },
-  created: function () {
-    this.counted()
   }
 }
 </script>

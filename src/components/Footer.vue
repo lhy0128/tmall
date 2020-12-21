@@ -27,7 +27,7 @@ export default {
 .foot_container{
   /* margin-top: 65%; */
   width: 100%;
-  background-color:#545c64;
+  background-color:#192638;
   color:#fff;
   height:82px;
   clear: both;

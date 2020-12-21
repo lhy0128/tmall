@@ -34,7 +34,7 @@ var router = new Router({
       component: ShoppingCar,
       name: 'shoppingcar',
       meta: {
-        title: '购物车',
+        title: '购物车'
         // requireAuth: true
       }
     },

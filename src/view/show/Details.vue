@@ -22,9 +22,7 @@
       </el-row>
       <el-row :gutter="20">
         <el-col :span="4">
-          <el-radio-group v-model="express">
-            <el-button type="success" circle v-for="item in expressOptions" :key="item" :label="item"></el-button>
-          </el-radio-group>
+          <p class="pcolor">{{ Product.color }}</p>
         </el-col>
         <el-col :span="6">
           <el-radio-button label="默认"></el-radio-button>
@@ -39,10 +37,12 @@
       </el-row>
       <el-button>加入购物车</el-button>
       <el-button size="medium">立即购买</el-button>
-      <el-row :gutter="20">
-        <p>顺丰包邮</p>
-        <p>免息分期</p>
-        <p>正品保障</p>
+      <el-row :gutter="20" class="color">
+        <p class="el-icon-truck"> 顺丰包邮</p>
+        <br>
+        <p class="el-icon-time"> 免息分期</p>
+        <br>
+        <p class="el-icon-medal-1"> 正品保障</p>
       </el-row>
     </div>
     </div>
@@ -53,17 +53,14 @@
             <img :src="item.src" width="100%" height="90%">
           </p>
         </el-tab-pane>
-        <el-tab-pane label="搭配灵感" name="second">
-          <div id="nav">
-            <p v-for="item in match" :key="item">
-              <img :src="item.src" width="100%">
-            </p>
-          </div>
+        <el-tab-pane label="商品参数" name="second">
+          <br>
+          <br>
+          <p>{{ Product.message }}</p>
         </el-tab-pane>
-        <el-tab-pane label="商品参数" name="third">
+        <el-tab-pane label="品牌故事" name="third">
           <br>
-          <br>
-          {{ Product.message }}
+          {{ Product.story }}
         </el-tab-pane>
         <el-tab-pane label="服务说明" name="fourth">
           <h3>价格说明</h3>
@@ -149,12 +146,6 @@ export default {
 .hea_con{
   margin-top: 90px;
 }
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-.el-carousel__item:nth-child(2n+1) {
-  background-color: #d3dce6;
-}
 .block{
   width: 30%;
   margin: 35px;
@@ -186,10 +177,15 @@ export default {
   color: #ccc;
 }
 .el-row {
-  margin: 30px;
+  margin: 25px;
   /* &: last-child {
   margin-bottom: 0;
   } */
 }
-
+.color{
+  color: rgb(132, 55, 194);
+}
+.pcolor{
+  color: rgb(129, 6, 119);
+}
 </style>

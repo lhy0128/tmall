@@ -21,7 +21,7 @@
       "id":"1",
       "name": "product1",
       "price": "1111",
-      "color":"玫瑰金色",
+      "color":"银色",
       "img":"fes1.png"
     },
     {
@@ -47,9 +47,9 @@
     }],
     "productdetails":[{
       "id":"1",
-      "name":"PETITE ROSELYN",
+      "name":"PETITE STERLING",
       "price":1090,
-      "color":"#ccc",
+      "color":"银色",
       "size":"默认",
       "imgList":[{
         "id":"1",
@@ -103,70 +103,322 @@
         "id":"4",
         "imgName":"4.png"
       }],
-      "message":"设计灵感源自19世纪末的米兰，融入兼收并蓄的现代风格，轻盈而不失刚毅，象征都市男女的坚韧自如、刚柔并济；以摩登、优雅的金属编织表带与经典简约表盘打造出更适合都市男女出行装扮的时尚单品。"
+      "message":"设计灵感源自19世纪末的米兰，融入兼收并蓄的现代风格，轻盈而不失刚毅，象征都市男女的坚韧自如、刚柔并济；以摩登、优雅的金属编织表带与经典简约表盘打造出更适合都市男女出行装扮的时尚单品。",
+      "story":"DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
     },
     {
       "id":"2",
-      "name":"PETITE ROSELYN1",
-      "price":1000,
-      "color":"#ccc",
+      "name":"PETITE MELROSE",
+      "price":1290,
+      "color":"玫瑰金色",
       "size":"默认",
-      "imgName":"1.jpg",
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
       "message":"product2"
     },
     {
       "id":"3",
       "name":"PETITE ROSELYN",
       "price":1090,
-      "color":"#ccc",
+      "color":"玫瑰金色",
       "size":"默认",
-      "imgName":"1.jpg",
-      "message":"product3"
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
+      "message":"CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story":"DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
     },
     {
       "id":"4",
-      "name":"PETITE ROSELYN",
-      "price":1090,
-      "color":"#ccc",
+      "name":"PETITE BRISTOL",
+      "price":1190,
+      "color":"玫瑰金色",
       "size":"默认",
-      "imgName":"1.jpg",
-      "message":"product4"
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
+      "message":"CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story":"DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
     },
     {
       "id":"5",
-      "name":"PETITE ROSELYN",
-      "price":1090,
-      "color":"#ccc",
+      "name":"CLASSIC SHEFFIELD",
+      "price":1380,
+      "color":"玫瑰金色",
       "size":"默认",
-      "imgName":"1.jpg",
-      "message":"product5"
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
+      "message":"CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story":"DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
     },
     {
       "id":"6",
-      "name":"PETITE ROSELYN",
-      "price":1090,
-      "color":"#ccc",
+      "name":"PETITE MELROSE",
+      "price":1380,
+      "color":"玫瑰金色",
       "size":"默认",
-      "imgName":"1.jpg",
-      "message":"product1"
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
+      "message":"CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story":"DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
     },
     {
       "id":"7",
       "name":"PETITE ROSELYN",
-      "price":1090,
-      "color":"#ccc",
+      "price":1690,
+      "color":"玫瑰金色",
       "size":"默认",
-      "imgName":"1.jpg",
-      "message":"product1"
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
+      "message":"CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story":"DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
     },
     {
       "id":"8",
-      "name":"PETITE ROSELYN",
-      "price":1090,
-      "color":"#ccc",
+      "name":"PETITE BRISTOL",
+      "price":1350,
+      "color":"玫瑰金色",
       "size":"默认",
-      "imgName":"1.jpg",
-      "message":"product1"
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
+      "message":"CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story":"DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
     },
     {
       "id":"9",
@@ -183,7 +435,42 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg",
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
       "message":"product1"
     },
     {
@@ -192,7 +479,42 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg",
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
       "message":"product1"
     }]
 }

@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- <Serch></Serch> -->
-    <Carousel :imgList="imgList" :fesimg="fesimg"></Carousel>
-    <Card :title="title"></Card>
-    <Card :title="title"></Card>
+    <Carousel :imgList="imgList"></Carousel>
+    <Card :title="title1" :products="product1"></Card>
+    <Card :title="title2" :products="product2"></Card>
     <hr color="red">
   </div>
 </template>
@@ -24,37 +24,70 @@ export default {
         {id: 3, src: require('../../assets/banner/banner3.jpg')},
         {id: 4, src: require('../../assets/banner/banner4.jpg')}
       ],
-      title: '节日甄选',
-      fesimg: [
-        {id: 1, src: require('../../assets/festival/fes1.png')},
-        {id: 2, src: require('../../assets/festival/fes2.png')},
-        {id: 3, src: require('../../assets/festival/fes3.png')},
-        {id: 4, src: require('../../assets/festival/fes4.png')}
+      title1: '节日甄选',
+      title2: '为他精选',
+      product1: [
+        {
+          id: 1,
+          name: 'PETITE STERLING',
+          price: 1290,
+          color: '银色',
+          src: require('../../assets/clever/cle2.png')
+        },
+        {
+          id: 2,
+          name: 'PETITE MELROSE',
+          price: 1290,
+          color: '玫瑰金色',
+          src: require('../../assets/clever/cle1.png')
+        },
+        {
+          id: 3,
+          name: 'PETITE ROSELYN',
+          price: 1090,
+          color: '玫瑰金色',
+          src: require('../../assets/festival/fes1.png')
+        },
+        {
+          id: 4,
+          name: 'PETITE BRISTOL',
+          price: 1190,
+          color: '玫瑰金色',
+          src: require('../../assets/clever/cle4.png')
+        }
+      ],
+      product2: [
+        {
+          id: 5,
+          name: 'CLASSIC SHEFFIELD',
+          price: 1380,
+          color: '玫瑰金色',
+          src: require('../../assets/simple/1.png')
+        },
+        {
+          id: 6,
+          name: 'PETITE MELROSE',
+          price: 1380,
+          color: '玫瑰金色',
+          src: require('../../assets/simple/2.png')
+        },
+        {
+          id: 7,
+          name: 'PETITE ROSELYN',
+          price: 1690,
+          color: '玫瑰金色',
+          src: require('../../assets/simple/3.png')
+        },
+        {
+          id: 8,
+          name: 'PETITE BRISTOL',
+          price: 1350,
+          color: '玫瑰金色',
+          src: require('../../assets/simple/4.png')
+        }
       ]
     }
   },
-  // created () {
-  //   this.getImgList()
-  // },
-  // methods: {
-  //   getImgList () {
-  //     requseimgList().then(res => {
-  //       // console.log(res)
-  //       var imgList = JSON.parse(res.request.responseText)
-  //       let imgLists = imgList.data
-  //       // console.log(imgLists)
-  //       if (res.data.code === 0) {
-  //         alert('图片加载失败')
-  //       } else {
-  //         for (let index in imgLists) {
-  //           this.imgList[index] = imgLists[index]
-  //           // console.log(this.imgList[index].src)
-  //         }
-  //       }
-  //     })
-  //     console.log(this.imgList)
-  //   }
-  // },
   components: {
     Options,
     Carousel,

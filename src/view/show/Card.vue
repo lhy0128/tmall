@@ -3,14 +3,14 @@
       <p class="p">{{ title }}</p>
       <div class="row">
         <el-row>
-          <el-col :span="5" v-for="id in 4" :key="id" :offset="1" @click="selectGood(this.id)">
+          <el-col :span="5" v-for="id in products" :key="id.id" :offset="1" >
             <el-card shadow="hover" :body-style="{ padding: '0px' }">
-              <router-link class="a" :to="{name:'details', params: {id:id}}">
-              <img :src="require('../../assets/festival/fes4.png')" width="100%" >
+              <router-link class="a" :to="{name:'details', params: {id:id.id}}">
+              <img :src="id.src" width="100%" >
                 <div style="padding: 10px;">
-                  <p>{{product.name}}</p>
-                  <p>11111</p>
-                  <p>#999</p>
+                  <p>{{id.name}}</p>
+                  <p>{{id.color}}</p>
+                  <p>￥&nbsp;{{id.price}}</p>
                 </div>
               </router-link>
             </el-card>
@@ -29,7 +29,7 @@ export default {
       ]
     }
   },
-  props: ['title', 'fesimg'],
+  props: ['title', 'products'],
   methods: {
     selectGood (id) {
       alert('1')
