@@ -43,8 +43,9 @@ var router = new Router({
       name: 'register',
       meta: { title: '注册' }
     },
-    { path: '/details',
+    { path: '/details/:id',
       component: Details,
+      props: true, // 不知道什么意思
       name: 'details',
       meta: { title: '详情页' }
     },
@@ -67,6 +68,7 @@ router.beforeEach((to, from, next) => {
 // 注册全局钩子用来拦截导航
 router.beforeEach((to, from, next) => {
   const token = store.state.token
+  console.log(token)
   if (to.meta.requireAuth) {
     if (token) {
       next()

@@ -10,8 +10,8 @@
     </div>
     <div class="right">
       <el-row :gutter="20">
-        <el-col :span="16">ELAN NECKLACE</el-col>
-        <el-col :span="8">￥&nbsp;890</el-col>
+        <el-col :span="16">{{ Product.name }}</el-col>
+        <el-col :span="8">￥&nbsp;{{Product.price}}</el-col>
       </el-row>
       <hr>
       <el-row :gutter="20">
@@ -60,7 +60,11 @@
             </p>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="商品参数" name="third">角色管理</el-tab-pane>
+        <el-tab-pane label="商品参数" name="third">
+          <br>
+          <br>
+          {{ Product.message }}
+        </el-tab-pane>
         <el-tab-pane label="服务说明" name="fourth">
           <h3>价格说明</h3>
           <div class="det">
@@ -81,41 +85,56 @@
 </template>
 
 <script>
+import { requseProductDetails } from '@/axios/api.js'
 import Carousel from './Carousel'
 export default {
+  props: ['id'],
   data () {
     return {
-      imgList: [
-        {id: 1, src: require('../../assets/details/details1.png')},
-        {id: 2, src: require('../../assets/details/details2.png')},
-        {id: 3, src: require('../../assets/details/details3.png')},
-        {id: 4, src: require('../../assets/details/details8.jpg')},
-        {id: 5, src: require('../../assets/details/details7.jpg')}
-      ],
-      activeName: 'second',
-      disPlay: [
-        {id: 1, src: require('../../assets/disPlay/disPlay1.jpg')},
-        {id: 2, src: require('../../assets/disPlay/disPlay2.jpg')},
-        {id: 3, src: require('../../assets/disPlay/disPlay3.jpg')},
-        {id: 4, src: require('../../assets/disPlay/disPlay4.jpg')},
-        {id: 5, src: require('../../assets/disPlay/disPlay5.png')}
-      ],
-      match: [
-        {id: 1, src: require('../../assets/match/match1.jpg')},
-        {id: 2, src: require('../../assets/match/match2.jpg')},
-        {id: 3, src: require('../../assets/match/match3.jpg')},
-        {id: 4, src: require('../../assets/match/match4.jpg')}
-      ],
+      imgList: [],
+      activeName: 'first',
+      disPlay: [],
+      match: [],
       express: '红色',
-      expressOptions: ['红色', '蓝色']
+      expressOptions: ['红色', '蓝色'],
+      loading: false,
+      Product: [{}]
     }
   },
   components: {
     Carousel
   },
+  created () {
+    this.getProduct()
+  },
   methods: {
-    handleClick (tab, event) {
-      console.log(tab, event)
+    getProduct () {
+      // alert(this.id)
+      requseProductDetails().then(res => {
+        var id = this.id - 1
+        // console.log(res)
+        var Product = JSON.parse(res.request.responseText)
+        // let Products = Product.data
+        // console.log(Product[this.id])
+        this.Product = Product[id]
+        // console.log(this.Product)
+        this.imgList = Product[id].imgList
+        this.disPlay = Product[id].disPlay
+        this.match = Product[id].match
+        console.log(this.imgList)
+        for (let l in this.imgList) {
+          console.log(this.imgList[l].imgName)
+          this.imgList[l].src = require('../../assets/details' + this.id + '/' + this.imgList[l].imgName)
+        }
+        for (let j in this.disPlay) {
+          // console.log(this.imgList[l].imgName)
+          this.disPlay[j].src = require('../../assets/display' + this.id + '/' + this.disPlay[j].imgName)
+        }
+        for (let k in this.match) {
+          // console.log(this.imgList[l].imgName)
+          this.match[k].src = require('../../assets/match' + this.id + '/' + this.match[k].imgName)
+        }
+      })
     }
   }
 }

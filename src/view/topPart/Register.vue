@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="all">
     <div class="back">
     <img src="../../assets/scaner/scaner2.jpg" style="height:100%">
     <div class="center">
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+// import { register } from '@/axios/api.js'
 export default {
   name: 'register',
   data () {
@@ -83,7 +84,7 @@ export default {
       },
       rules: {
         name: [
-          { required: true, message: '请输入活动名称', trigger: 'blur' },
+          { required: true, message: '请输入昵称', trigger: 'blur' },
           { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
         ],
         pass: [
@@ -122,6 +123,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.all{
+  overflow-x: hidden;
+  width: 100%;
+}
 .back{
   background: url('');
   width: 100%;
@@ -131,8 +136,8 @@ export default {
 .center{
   position:absolute;
   top: 250px;
-  left: 1000px;
-  width: 100%;
+  left: 64%;
+  /* width: 100%; */
   z-index: 2;
 }
 .right{

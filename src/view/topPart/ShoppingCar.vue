@@ -1,8 +1,7 @@
 <template>
   <div class="table">
       <el-row>
-      <el-col style="background-color:white;padding: 10px"
-      :span="16" :offset="4" align="middle">
+      <el-col style="background-color:white;padding: 10px" :span="16" :offset="4" align="middle">
         <el-row>
           <el-col :span="1">
             <span>选择</span>
@@ -11,7 +10,7 @@
             <span>商品图片</span>
           </el-col>
           <el-col :span="8" align="middle">
-            <span>商品信息</span>
+            <span>商品名称</span>
           </el-col>
           <el-col :span="3" align="middle">
             <span>单价</span>
@@ -55,8 +54,7 @@
     </el-row>
     <el-row style="margin-top: 30px">
       <el-col :span="16" :offset="4" style="background-color: white;padding: 20px">
-        <el-checkbox :indeterminate="isIndeterminate"
-        v-model="checkAll" @change="handleCheckAllChange">全选</el-checkbox>
+        <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="checkAll">全选</el-checkbox>
         <span style="margin-left: 20px;color:red" @click="clearCart">清空购物车</span>
         <div style="float:right">
           <span style="margin-right: 20px">已选择{{checkedCount}}件，共{{checkedMoney}}元</span>

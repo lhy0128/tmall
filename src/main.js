@@ -4,11 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import store from './store'
 import router from './router'
+// auth.js文件一定要放在axios前面。放在后面就不行。原因未知
+import auth from './auth.js'
+
 import axios from './axios.js'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // import Mock from './mock/index'
 // element-ui组件的样式需要单独引入
+Vue.use(auth)
 Vue.prototype.$ajax = axios
 // axios不能直接使用use引入，只能每个需要发送请求的组件中即时引入
 Vue.use(ElementUI)

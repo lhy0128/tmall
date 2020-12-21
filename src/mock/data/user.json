@@ -1,59 +1,118 @@
 {
     "user":[{
+      "id":"1",
       "name": "lhy65",
       "password": "123456",
       "email":"105672!@1112"
     },
     {
+      "id":"2",
       "name": "lhy6",
       "password": "7676456",
       "email":"10067777722!@1112"
     },
     {
+      "id":"3",
       "name": "lhy5",
       "password": "125656",
       "email":"15622!@1112"
     }],
-    "db":[{
-      "daly":"lhy<1005447927@qq.com>",
-      "pass":"swsws"
-    }],
-    "imglist":{
-      "code":1,
-      "msg":"",
-      "data":[{
-        "id":"1",
-        "src":"https://gitee.com/lhy0128/tmall/blob/master/src/assets/banner/banner1.jpg"
-      },
-      {
-        "id":"2",
-        "src":"https://gitee.com/lhy0128/tmall/blob/master/src/assets/banner/banner2.jpg"
-      },
-      {
-        "id":"3",
-        "src":"https://gitee.com/lhy0128/tmall/blob/master/src/assets/banner/banner3.jpg"
-      },
-      {
-        "id":"4",
-        "src":"https://gitee.com/lhy0128/tmall/blob/master/src/assets/banner/banner4.jpg"
-      }
-    ]
+    "productinfo":[{
+      "id":"1",
+      "name": "product1",
+      "price": "1111",
+      "color":"玫瑰金色",
+      "img":"fes1.png"
     },
-    "product":[{
+    {
+      "id":"2",
+      "name": "product2",
+      "price": "1111",
+      "color":"玫瑰金色",
+      "img":"fes2.png"
+    },
+    {
+      "id":"3",
+      "name": "product3",
+      "price": "1111",
+      "color":"玫瑰金色",
+      "img":"fes3.png"
+    },
+    {
+      "id":"4",
+      "name": "product4",
+      "price": "1111",
+      "color":"玫瑰金色",
+      "img":"fes4.png"
+    }],
+    "productdetails":[{
       "id":"1",
       "name":"PETITE ROSELYN",
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgList":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "disPlay":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      },
+      {
+        "id":"5",
+        "imgName":"5.png"
+      }],
+      "match":[{
+        "id":"1",
+        "imgName":"1.png"
+      },
+      {
+        "id":"2",
+        "imgName":"2.png"
+      },
+      {
+        "id":"3",
+        "imgName":"3.png"
+      },
+      {
+        "id":"4",
+        "imgName":"4.png"
+      }],
+      "message":"设计灵感源自19世纪末的米兰，融入兼收并蓄的现代风格，轻盈而不失刚毅，象征都市男女的坚韧自如、刚柔并济；以摩登、优雅的金属编织表带与经典简约表盘打造出更适合都市男女出行装扮的时尚单品。"
     },
     {
       "id":"2",
-      "name":"PETITE ROSELYN",
-      "price":1090,
+      "name":"PETITE ROSELYN1",
+      "price":1000,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product2"
     },
     {
       "id":"3",
@@ -61,7 +120,8 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product3"
     },
     {
       "id":"4",
@@ -69,7 +129,8 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product4"
     },
     {
       "id":"5",
@@ -77,7 +138,8 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product5"
     },
     {
       "id":"6",
@@ -85,7 +147,8 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product1"
     },
     {
       "id":"7",
@@ -93,7 +156,8 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product1"
     },
     {
       "id":"8",
@@ -101,7 +165,8 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product1"
     },
     {
       "id":"9",
@@ -109,7 +174,8 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product1"
     },
     {
       "id":"10",
@@ -117,7 +183,8 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product1"
     },
     {
       "id":"11",
@@ -125,8 +192,7 @@
       "price":1090,
       "color":"#ccc",
       "size":"默认",
-      "imgName":"1.jpg"
+      "imgName":"1.jpg",
+      "message":"product1"
     }]
-
-  
 }

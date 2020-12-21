@@ -39,20 +39,21 @@
   <el-menu-item index="8" >穿搭灵感</el-menu-item>
   <el-menu-item index="9" >查找门店</el-menu-item>
   <el-menu-item index="10" >探索DW</el-menu-item>
-  <el-submenu index="11">
+  <el-submenu index="11" v-if="!isLogin">
     <template slot="title" ><span class="el-icon-user"></span></template>
-    <el-menu-item index="5-1">
+    <el-menu-item index="11-1">
       <p>已是DW会员？</p>
     </el-menu-item>
-    <el-menu-item index="5-2">
+    <el-menu-item index="11-2">
       <router-link class="a" :to="{name:'login'}">
         <el-button type="primary" size="small">登录</el-button>
       </router-link></el-menu-item>
-    <el-menu-item index="5-3">
+    <el-menu-item index="11-3">
       <router-link class="a" :to="{name:'register'}">
        <span>注册</span>
       </router-link></el-menu-item>
   </el-submenu>
+  <el-menu-item index="13" v-if="isLogin">欢迎{{ username }}</el-menu-item>
   <el-menu-item index="12" >
     <router-link class="a" :to="{name:'shoppingcar'}">
       <span class="el-icon-shopping-cart-full"></span>
@@ -64,10 +65,19 @@
 </template>
 
 <script>
+import { mapGetters, mapState } from 'vuex'
 export default {
+  // props: ['login'],
   data () {
     return {}
+  },
+  computed: {
+    ...mapState({
+      username: state => state.user.username
+    }),
+    ...mapGetters('user', { isLogin: 'isLogin' })
   }
+
 }
 </script>
 

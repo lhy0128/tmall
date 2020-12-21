@@ -2,10 +2,8 @@
   <div>
     <br>
     <el-menu
-  :default-active="activeIndex2"
   class="el-menu-demo"
   mode="horizontal"
-  @select="handleSelect"
   background-color="#545c64"
   text-color="#fff"
   active-text-color="#ffd04b">
@@ -40,15 +38,15 @@
 export default {
   data () {
     return {
-      activeIndex: '1',
-      activeIndex2: '1'
-    }
-  },
-  methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath)
+      // activeIndex: '1'
+      // activeIndex2: '1'
     }
   }
+  // methods: {
+  //   handleSelect (key, keyPath) {
+  //     console.log(key, keyPath)
+  //   }
+  // }
 }
 </script>
 
