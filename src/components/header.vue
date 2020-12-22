@@ -39,21 +39,18 @@
   <el-menu-item index="8" >穿搭灵感</el-menu-item>
   <el-menu-item index="9" >查找门店</el-menu-item>
   <el-menu-item index="10" >探索DW</el-menu-item>
-  <el-submenu index="11" v-if="!isLogin">
-    <template slot="title" ><span class="el-icon-user"></span></template>
-    <el-menu-item index="11-1">
-      <p>已是DW会员？</p>
-    </el-menu-item>
-    <el-menu-item index="11-2">
-      <router-link class="a" :to="{name:'login'}">
-        <el-button type="primary" size="small">登录</el-button>
-      </router-link></el-menu-item>
-    <el-menu-item index="11-3">
-      <router-link class="a" :to="{name:'register'}">
-       <span>注册</span>
-      </router-link></el-menu-item>
-  </el-submenu>
-  <el-menu-item index="13" v-if="isLogin">欢迎{{ username }}</el-menu-item>
+  <el-menu-item index="11" v-if="!isLogin">
+    <span class="el-icon-user"></span>
+    <router-link class="a" :to="{name:'login'}">
+      登录
+    </router-link>
+  </el-menu-item>
+  <el-menu-item index="13" v-if="isLogin">
+    <span>欢迎 username </span>
+    <span>
+      <a href="">注销</a>
+    </span>
+  </el-menu-item>
   <el-menu-item index="12" >
     <router-link class="a" :to="{name:'shoppingcar'}">
       <span class="el-icon-shopping-cart-full"></span>
@@ -69,13 +66,24 @@ import { mapGetters, mapState } from 'vuex'
 export default {
   // props: ['login'],
   data () {
-    return {}
+    return {
+      user: []
+    }
   },
   computed: {
     ...mapState({
       username: state => state.user.username
     }),
     ...mapGetters('user', { isLogin: 'isLogin' })
+  },
+  created () {
+    this.getUsername()
+  },
+  methods: {
+    getUsername () {
+      this.user = localStorage.getItem('user')
+      console.log(this.user)
+    }
   }
 
 }

@@ -8,6 +8,12 @@
         <h2 class="DW-font-book">SHARE LOVE RETURN IN TIME</h2>
     </div>
   </div>
+  <p style="text-align:center">
+    <span>还没有账号？点击此处去</span>
+    <router-link class="a" :to="{name:'register'}">
+       <span>注册</span>
+    </router-link>
+  </p>
   <div class="right">
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
       <el-form-item label="用户名" prop="username">
@@ -83,9 +89,9 @@ export default {
                   })
                   // 登陆成功，避免刷新后无登录信息
                   // console.log(res.data.data)
+                  localStorage.setItem('user', JSON.stringify(loginParams))
                   this.$store.commit('user/setUser', loginParams.username)
                   this.$auth.setAuthorization(index)
-                  // alert(usernames)
                   this.$router.push({ path: '/home' })
                   this.logining = true
                 }

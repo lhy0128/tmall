@@ -30,12 +30,25 @@
         <el-col :span="4">尺寸指南</el-col>
       </el-row>
       <el-row :gutter="20">
-        <el-col :span="4">+定制贺卡</el-col>
-        <el-col :span="6"></el-col>
-        <el-col :span="4"></el-col>
-        <el-col :span="4"></el-col>
+        <el-col :span="5">+定制贺卡</el-col>
+        <el-col :span="8"> </el-col>
+        <el-col :span="3">
+          <span class="title" >配送至：</span>
+        </el-col>
+        <el-col :span="4">
+          <el-select v-model="value" placeholder="请选择">
+          <el-option
+            v-for="item in cities"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+            <span style="float: left">{{ item.label }}</span>
+            <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
+          </el-option>
+          </el-select>
+        </el-col>
       </el-row>
-      <el-button>加入购物车</el-button>
+      <el-button @click="addToCar">加入购物车</el-button>
       <el-button size="medium">立即购买</el-button>
       <el-row :gutter="20" class="color">
         <p class="el-icon-truck"> 顺丰包邮</p>
@@ -47,7 +60,7 @@
     </div>
     </div>
     <div class="later">
-      <el-tabs v-model="activeName" @tab-click="handleClick">
+      <el-tabs v-model="activeName" >
         <el-tab-pane label="商品展示" name="first">
           <p v-for="item in disPlay" :key="item">
             <img :src="item.src" width="100%" height="90%">
@@ -82,18 +95,36 @@
 </template>
 
 <script>
+// import swal from 'sweetalert'
 import { requseProductDetails } from '@/axios/api.js'
 import Carousel from './Carousel'
 export default {
   props: ['id'],
   data () {
     return {
+      cities: [{
+        value: 'Beijing',
+        label: '北京'
+      }, {
+        value: 'Shanghai',
+        label: '上海'
+      }, {
+        value: 'Nanjing',
+        label: '南京'
+      }, {
+        value: 'Chengdu',
+        label: '成都'
+      }, {
+        value: 'Shenzhen',
+        label: '深圳'
+      }, {
+        value: 'Guangzhou',
+        label: '广州'
+      }],
+      value: '',
       imgList: [],
       activeName: 'first',
       disPlay: [],
-      match: [],
-      express: '红色',
-      expressOptions: ['红色', '蓝色'],
       loading: false,
       Product: [{}]
     }
@@ -106,7 +137,6 @@ export default {
   },
   methods: {
     getProduct () {
-      // alert(this.id)
       requseProductDetails().then(res => {
         var id = this.id - 1
         // console.log(res)
@@ -117,27 +147,66 @@ export default {
         // console.log(this.Product)
         this.imgList = Product[id].imgList
         this.disPlay = Product[id].disPlay
-        this.match = Product[id].match
-        console.log(this.imgList)
+        // this.match = Product[id].match
+        // console.log(this.imgList)
         for (let l in this.imgList) {
-          console.log(this.imgList[l].imgName)
+          // console.log(this.imgList[l].imgName)
           this.imgList[l].src = require('../../assets/details' + this.id + '/' + this.imgList[l].imgName)
         }
         for (let j in this.disPlay) {
           // console.log(this.imgList[l].imgName)
           this.disPlay[j].src = require('../../assets/display' + this.id + '/' + this.disPlay[j].imgName)
         }
-        for (let k in this.match) {
-          // console.log(this.imgList[l].imgName)
-          this.match[k].src = require('../../assets/match' + this.id + '/' + this.match[k].imgName)
-        }
       })
+    },
+    addToCar () {
+      if (this.value === '') {
+        this.$notify.error({
+          title: '错误',
+          message: '请选择配送地址',
+          duration: 2000
+        })
+        return
+      }
+      let i
+      let cart = []
+      const item = {
+        id: this.id,
+        name: this.Product.name,
+        img: require('../../assets/details' + this.id + '/' + this.imgList[0].imgName),
+        price: this.Product.price,
+        count: 1
+      }
+      const str = localStorage.getItem('cart')
+      if (str !== null && str !== '') {
+        cart = JSON.parse(str)
+      }
+      for (i = 0; i < cart.length; i += 1) {
+        if (this.productSame(cart[i], item)) {
+          cart[i].count += 1
+          break
+        }
+      }
+      if (i >= cart.length) {
+        cart.push(item)
+      }
+      localStorage.setItem('cart', JSON.stringify(cart))
+      this.$notify({
+        title: '成功',
+        message: '成功加入购物车',
+        type: 'success'
+      })
+    },
+    productSame (oldItem, newItem) {
+      if (oldItem.id !== newItem.id || oldItem.name !== newItem.name) {
+        return false
+      }
+      return true
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
   width: 90%;

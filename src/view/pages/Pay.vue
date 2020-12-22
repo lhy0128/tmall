@@ -3,8 +3,6 @@
     <el-row>
       <el-col :span="16" :offset="4">
         <span>配送至：</span>
-        <location @addressChange="getAddress"
-        style="display:inline"></location>
         <div style="width:50%;margin:10px 10px 10px 0px;">
           <span>详细地址:</span>
           <el-input
@@ -29,23 +27,23 @@
           <el-col :span="1">
             <span>序号</span>
           </el-col>
-          <el-col :span="3" align="middle">
+          <el-col :span="3" >
             <span>商品图片</span>
           </el-col>
-          <el-col :span="10" align="middle">
+          <el-col :span="10">
             <span>商品信息</span>
           </el-col>
-          <el-col :span="3" align="middle">
+          <el-col :span="3">
             <span>单价</span>
           </el-col>
-          <el-col :span="4" align="middle">
+          <el-col :span="4">
             <span>数量</span>
           </el-col>
-          <el-col :span="3" align="middle">
+          <el-col :span="3">
             <span>总价</span>
           </el-col>
         </el-row>
-        <el-row v-for="(item, index) in items" :key="index">
+        <el-row v-for="(item, index) in items" :key="index" class="pad">
           <el-col :span="1" class="info">
             <span>{{index + 1}}</span>
           </el-col>
@@ -55,9 +53,6 @@
           </el-col>
           <el-col :span="10" class="info" style="color: #444;">
             <span>{{item.name}}</span>
-            <span nowarp v-for="(p, i) in item.property" :key="i">
-              {{p}}
-            </span>
           </el-col>
           <el-col :span="3" class="info">
             <span>￥{{item.price}}元</span>
@@ -83,7 +78,7 @@
 </template>
 <script>
 import swal from 'sweetalert'
-import { CodeToText } from 'element-china-area-data'
+// import { CodeToText } from 'element-china-area-data'
 // import Location from '../components/Location.vue';
 export default {
   components: {
@@ -99,21 +94,10 @@ export default {
   },
   methods: {
     submitBill () {
-      const address = JSON.parse(localStorage.getItem('address'))
-      let addressText = ''
+      // const address = JSON.parse(localStorage.getItem('address'))
+      // let addressText = ''
       let productText = ''
-      for (let i = 0; i < address.length; i += 1) {
-        addressText += CodeToText[address[i]]
-      }
-      for (let i = 0; i < this.items.length; i += 1) {
-        productText += `${i + 1}:`
-        productText += this.items[i].name
-        for (let j = 0; j < this.items[i].property.length; j += 1) {
-          productText += this.items[i].property[j]
-        }
-        productText += '<br/>'
-      }
-      const htmlText = `快递：${this.express}<br/>金额：${this.checkedMoney}元<br/>${productText}地址：${addressText}${this.areaDetail}`
+      const htmlText = `快递：${this.express}<br/>金额：${this.checkedMoney}元<br/>${productText}`
       const span = document.createElement('span')
       span.innerHTML = htmlText
       const username = localStorage.getItem('user')
@@ -181,5 +165,8 @@ export default {
 <style scoped>
 .tab{
   margin-top: 90px;
+}
+.pad{
+  padding: 5px;
 }
 </style>
