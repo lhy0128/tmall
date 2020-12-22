@@ -1,7 +1,8 @@
 <template>
   <div class="serch" >
       <el-input placeholder="请输入内容">
-        <template slot="append"></template>
+        <template slot="append">
+        </template>
         <el-button type="success" slot="append" icon="el-icon-search"></el-button>
       </el-input>
   </div>
