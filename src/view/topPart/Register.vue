@@ -107,6 +107,11 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
+          let loginParams = {
+            username: this.ruleForm.username,
+            password: this.ruleForm.password
+          }
+          localStorage.setItem('user', JSON.stringify(loginParams))
           alert('submit!')
         } else {
           console.log('error submit!!')

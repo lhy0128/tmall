@@ -80,24 +80,31 @@ export default {
             let msg = res.request.statusText
             let status = res.request.status
             if (status === 200) {
-              for (let index in users) {
-                // console.log(users[index].name)
-                if (users[index].name === loginParams.username && users[index].password === loginParams.password) {
-                  this.$message({
-                    type: 'success',
-                    message: msg
-                  })
-                  // 登陆成功，避免刷新后无登录信息
-                  // console.log(res.data.data)
-                  localStorage.setItem('user', JSON.stringify(loginParams))
-                  this.$store.commit('user/setUser', loginParams.username)
-                  this.$auth.setAuthorization(index)
-                  this.$router.push({ path: '/home' })
-                  this.logining = true
+              const user = localStorage.getItem('user')
+              if (user !== '') {
+                this.$router.push({ path: '/home' })
+                this.logining = true
+              } else {
+                for (let index in users) {
+                  // console.log(users[index].name)
+                  if (users[index].name === loginParams.username && users[index].password === loginParams.password) {
+                    this.$message({
+                      type: 'success',
+                      message: msg
+                    })
+                    // 登陆成功，避免刷新后无登录信息
+                    // console.log(res.data.data)
+                    localStorage.setItem('user', JSON.stringify(loginParams))
+                    this.$store.commit('user/setUser', loginParams.username)
+                    this.$auth.setAuthorization(index)
+                    this.$router.push({ path: '/home' })
+                    this.logining = true
+                  }
                 }
               }
               if (this.logining === false) {
                 alert('账号或者密码错误')
+                return false
               }
             } else {
               this.$message({

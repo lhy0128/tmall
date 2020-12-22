@@ -48,7 +48,7 @@
   <el-menu-item index="13" v-if="isLogin">
     <span>欢迎 username </span>
     <span>
-      <a href="">注销</a>
+      <a href="" @click="remove">注销</a>
     </span>
   </el-menu-item>
   <el-menu-item index="12" >
@@ -83,6 +83,9 @@ export default {
     getUsername () {
       this.user = localStorage.getItem('user')
       console.log(this.user)
+    },
+    remove () {
+      localStorage.removeItem('user')
     }
   }
 

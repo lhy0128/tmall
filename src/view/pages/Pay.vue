@@ -77,41 +77,58 @@
   </div>
 </template>
 <script>
-import swal from 'sweetalert'
-// import { CodeToText } from 'element-china-area-data'
-// import Location from '../components/Location.vue';
 export default {
-  components: {
-    // Location
-  },
   data () {
     return {
       express: '邮政快递',
-      expressOptions: ['邮政快递', '中通快递', '圆通快递', '韵达快递'],
+      expressOptions: ['邮政快递', '中通快递', '极兔快递', '顺丰快递'],
       items: [],
       areaDetail: ''
     }
   },
   methods: {
     submitBill () {
-      // const address = JSON.parse(localStorage.getItem('address'))
-      // let addressText = ''
-      let productText = ''
-      const htmlText = `快递：${this.express}<br/>金额：${this.checkedMoney}元<br/>${productText}`
+      let express = this.express
+      let moneys = this.checkedMoney
+      const htmlText = '你的快递将会通过' + express + '发货' + ',一共花费' + moneys + '元'
       const span = document.createElement('span')
       span.innerHTML = htmlText
       const username = localStorage.getItem('user')
       if (username === '' || username === null) {
-        swal('提示', '请先登录再结算！', 'error').then(() => {
+        this.$alert('请先登录再购买', '提示', {
+          confirmButtonText: '确认',
+          // cancelButtonText: false,
+
+          type: 'warning',
+          center: true
+        }).then(() => {
           this.$router.push('/login')
         })
         return
       }
-      swal({
-        title: '支付成功',
-        icon: 'success',
-        content: span,
-        showCloseButton: true
+      if (this.areaDetail === '') {
+        this.$prompt('请输入详细地址', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          inputPattern: ''
+        }).then(({ value }) => {
+          this.$message({
+            type: 'success',
+            message: '你的地址是: ' + value
+          })
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '取消输入'
+          })
+        })
+      }
+      this.$alert('购买成功', '提示', {
+        confirmButtonText: '确认',
+        // cancelButtonText: false,
+        type: 'success',
+        message: span.innerHTML,
+        center: true
       }).then(() => {
         // 清除购物车里已被购买的商品,及订单
         const order = JSON.parse(localStorage.getItem('order'))
