@@ -35,7 +35,10 @@
 </template>
 
 <script>
-// import { register } from '@/axios/api.js'
+// import axios from 'axios'
+// import conf from '@/utils/config.js'
+// const { baseURL } = conf
+import { register } from '@/axios/api.js'
 export default {
   name: 'register',
   data () {
@@ -47,8 +50,8 @@ export default {
         if (!Number.isInteger(value)) {
           callback(new Error('请输入数字值'))
         } else {
-          if (value < 18) {
-            callback(new Error('必须年满18岁'))
+          if (value < 12) {
+            callback(new Error('必须年满12岁'))
           } else {
             callback()
           }
@@ -85,7 +88,7 @@ export default {
       rules: {
         name: [
           { required: true, message: '请输入昵称', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+          { min: 3, max: 6, message: '长度在 3 到 6 个字符', trigger: 'blur' }
         ],
         pass: [
           { required: true, validator: validatePass, trigger: 'blur' }
@@ -108,11 +111,17 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           let loginParams = {
-            username: this.ruleForm.username,
-            password: this.ruleForm.password
+            name: this.ruleForm.name,
+            password: this.ruleForm.pass
           }
-          localStorage.setItem('user', JSON.stringify(loginParams))
-          alert('submit!')
+          const loginParam = JSON.stringify(loginParams)
+          console.log(loginParam)
+          register(JSON.parse(loginParam))
+          this.$message({
+            message: '恭喜你注册成功，使用账号登录吧^_^',
+            type: 'success'
+          })
+          this.$router.push({ path: '/login' })
         } else {
           console.log('error submit!!')
           return false

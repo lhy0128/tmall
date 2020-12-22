@@ -29,9 +29,9 @@
           </el-col>
           <el-col :span="3">
             <el-image style="width:80px;"
-            :src="item.img" fit="fill"></el-image>
+            :src="item.img"></el-image>
           </el-col>
-          <el-col :span="8" class="info" style="color: #444;">
+          <el-col :span="8" class="info">
             <div>
               <span>{{item.name}}</span>
             </div>
@@ -187,6 +187,9 @@ export default {
 <style scoped>
 .table{
   margin-top: 90px;
-  border-collapse:collapse;
+  /* border-collapse:collapse; */
+}
+.info{
+  margin-top: 3%;
 }
 </style>

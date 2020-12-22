@@ -83,17 +83,19 @@ export default {
       express: '邮政快递',
       expressOptions: ['邮政快递', '中通快递', '极兔快递', '顺丰快递'],
       items: [],
-      areaDetail: ''
+      areaDetail: '常熟理工学院东南校区'
     }
   },
   methods: {
     submitBill () {
-      let express = this.express
-      let moneys = this.checkedMoney
-      const htmlText = '你的快递将会通过' + express + '发货' + ',一共花费' + moneys + '元'
+      // let areaDetail = this.areaDetail
+      // let express = this.express
+      // let moneys = this.checkedMoney
+      const htmlText = '你的快递将会通过' + this.express + '发往' + this.areaDetail + ',请注意查收'
       const span = document.createElement('span')
       span.innerHTML = htmlText
-      const username = localStorage.getItem('user')
+      console.log(this.areaDetail)
+      const username = sessionStorage.getItem('user')
       if (username === '' || username === null) {
         this.$alert('请先登录再购买', '提示', {
           confirmButtonText: '确认',
@@ -106,28 +108,12 @@ export default {
         })
         return
       }
-      if (this.areaDetail === '') {
-        this.$prompt('请输入详细地址', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          inputPattern: ''
-        }).then(({ value }) => {
-          this.$message({
-            type: 'success',
-            message: '你的地址是: ' + value
-          })
-        }).catch(() => {
-          this.$message({
-            type: 'info',
-            message: '取消输入'
-          })
-        })
-      }
-      this.$alert('购买成功', '提示', {
+      this.$alert('提示', '购买成功', {
         confirmButtonText: '确认',
         // cancelButtonText: false,
         type: 'success',
         message: span.innerHTML,
+        showClose: false,
         center: true
       }).then(() => {
         // 清除购物车里已被购买的商品,及订单
@@ -183,7 +169,7 @@ export default {
 .tab{
   margin-top: 90px;
 }
-.pad{
-  padding: 5px;
+.info{
+  margin-top: 3%;
 }
 </style>

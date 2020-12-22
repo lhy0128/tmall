@@ -52,7 +52,7 @@ export default {
       rules: {
         username: [
           { required: true, message: '请输入用户名', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+          { min: 3, max: 6, message: '长度在 3 到 6 个字符', trigger: 'blur' }
         ],
         password: [
           { required: true, validator: validatePass, trigger: 'blur' }
@@ -77,29 +77,23 @@ export default {
             // console.log(res)
             var users = JSON.parse(res.request.responseText)
             // console.log(users)
-            let msg = res.request.statusText
+            // let msg = res.request.statusText
             let status = res.request.status
             if (status === 200) {
-              const user = localStorage.getItem('user')
-              if (user !== '') {
-                this.$router.push({ path: '/home' })
-                this.logining = true
-              } else {
-                for (let index in users) {
-                  // console.log(users[index].name)
-                  if (users[index].name === loginParams.username && users[index].password === loginParams.password) {
-                    this.$message({
-                      type: 'success',
-                      message: msg
-                    })
-                    // 登陆成功，避免刷新后无登录信息
-                    // console.log(res.data.data)
-                    localStorage.setItem('user', JSON.stringify(loginParams))
-                    this.$store.commit('user/setUser', loginParams.username)
-                    this.$auth.setAuthorization(index)
-                    this.$router.push({ path: '/home' })
-                    this.logining = true
-                  }
+              for (let index in users) {
+                // console.log(users[index].name)
+                if (users[index].name === loginParams.username && users[index].password === loginParams.password) {
+                  this.$message({
+                    type: 'success',
+                    message: '登录成功，你可以尽情选购啦'
+                  })
+                  // 登陆成功，避免刷新后无登录信息
+                  // console.log(res.data.data)
+                  // localStorage.setItem('user', JSON.stringify(loginParams))
+                  sessionStorage.setItem('user', loginParams.username)
+                  // this.$auth.setAuthorization(index)
+                  this.$router.push({ path: '/home' })
+                  this.logining = true
                 }
               }
               if (this.logining === false) {
@@ -109,7 +103,7 @@ export default {
             } else {
               this.$message({
                 type: 'error',
-                message: msg
+                message: '登录失败'
               })
             }
           }).catch(err => {

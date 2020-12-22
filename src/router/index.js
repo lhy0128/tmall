@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '../view/topPart/Login'
+import More from '../view/topPart/More'
 import Register from '../view/topPart/Register'
 import ShoppingCar from '../view/topPart/ShoppingCar'
 import Details from '../view/show/Details'
@@ -53,6 +54,11 @@ var router = new Router({
       component: Pay,
       name: 'pay',
       meta: { title: '支付页' }
+    },
+    { path: '/more',
+      component: More,
+      name: 'more',
+      meta: { title: '所有饰品' }
     }
   ],
   mode: 'history',

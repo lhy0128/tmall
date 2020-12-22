@@ -29,15 +29,15 @@ export default {
       ]
     }
   },
-  props: ['title', 'products'],
-  methods: {
-    selectGood (id) {
-      alert('1')
-      this.$router.push({
-        path: 'details',
-        query: {goodId: id}})
-    }
-  }
+  props: ['title', 'products']
+  // methods: {
+  //   selectGood (id) {
+  //     alert('1')
+  //     this.$router.push({
+  //       path: 'details',
+  //       query: {goodId: id}})
+  //   }
+  // }
   // created () {
   //   this.getProduct()
   // },

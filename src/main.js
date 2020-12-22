@@ -6,7 +6,6 @@ import store from './store'
 import router from './router'
 // auth.js文件一定要放在axios前面。放在后面就不行。原因未知
 import auth from './auth.js'
-
 import axios from './axios.js'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'

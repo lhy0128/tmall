@@ -11,7 +11,7 @@
 <script>
 // import { requseimgList } from '@/axios/api.js'
 import Serch from '../headPart/Serch'
-import Options from './Options'
+// import Options from './Options'
 import Carousel from '../show/Carousel'
 import Card from '../show/Card'
 export default {
@@ -89,7 +89,7 @@ export default {
     }
   },
   components: {
-    Options,
+    // Options,
     Carousel,
     Card,
     Serch
