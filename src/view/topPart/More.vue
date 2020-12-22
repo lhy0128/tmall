@@ -18,7 +18,7 @@
         <h4>温馨提示：赠品数量有限，加购可查看赠品；结算时输入折扣码享满减优惠</h4>
       </div>
       <Card :title="title1" :products="product1"></Card>
-      <Card :products="product2"></Card>
+      <Card :title="title2" :products="product2"></Card>
     </div>
   </div>
 </template>
@@ -31,6 +31,7 @@ export default {
   data () {
     return {
       title1: '戒指',
+      title2: '手镯',
       product1: [
         {
           id: 9,
@@ -61,32 +62,62 @@ export default {
           src: require('../../assets/ring/4.png')
         },
         {
-          id: 12,
+          id: 13,
           name: 'PETITE BRISTOL',
           price: 1190,
           color: '玫瑰金色',
           src: require('../../assets/ring/5.png')
         },
         {
-          id: 12,
+          id: 14,
           name: 'PETITE BRISTOL',
           price: 1190,
           color: '玫瑰金色',
           src: require('../../assets/ring/6.png')
         },
         {
-          id: 12,
+          id: 15,
           name: 'PETITE BRISTOL',
           price: 1190,
           color: '玫瑰金色',
           src: require('../../assets/ring/7.png')
         },
         {
-          id: 12,
+          id: 16,
           name: 'PETITE BRISTOL',
           price: 1190,
           color: '玫瑰金色',
           src: require('../../assets/ring/8.png')
+        }
+      ],
+      product2: [
+        {
+          id: 17,
+          name: 'CLASSIC SHEFFIELD',
+          price: 1380,
+          color: '玫瑰金色',
+          src: require('../../assets/hand/1.png')
+        },
+        {
+          id: 18,
+          name: 'PETITE MELROSE',
+          price: 1380,
+          color: '玫瑰金色',
+          src: require('../../assets/hand/2.png')
+        },
+        {
+          id: 19,
+          name: 'PETITE ROSELYN',
+          price: 1690,
+          color: '玫瑰金色',
+          src: require('../../assets/hand/3.png')
+        },
+        {
+          id: 20,
+          name: 'PETITE BRISTOL',
+          price: 1350,
+          color: '玫瑰金色',
+          src: require('../../assets/hand/4.png')
         }
       ]
     }
