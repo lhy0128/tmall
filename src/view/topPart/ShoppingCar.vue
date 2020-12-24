@@ -140,8 +140,6 @@ export default {
       this.isIndeterminate = count > 0 && count < this.items.length
     },
     handleCheckAllChange (val) {
-      // 单纯更改数组里的值并不会触发计算属性的更新
-      // 将数据整个地址进行替换才可以触发
       const temp = []
       for (let i = 0; i < this.items.length; i += 1) {
         temp[i] = val

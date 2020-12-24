@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <Serch></Serch> -->
     <Carousel :imgList="imgList"></Carousel>
     <Card :title="title1" :products="product1"></Card>
     <Card :title="title2" :products="product2"></Card>

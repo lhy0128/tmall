@@ -19,6 +19,7 @@
       </div>
       <Card :title="title1" :products="product1"></Card>
       <Card :title="title2" :products="product2"></Card>
+      <br>
     </div>
   </div>
 </template>
@@ -35,87 +36,87 @@ export default {
       product1: [
         {
           id: 9,
-          name: 'PETITE STERLING',
-          price: 1290,
-          color: '银色',
+          name: 'ELAN RING',
+          price: 490,
+          color: '玫瑰金色',
           src: require('../../assets/ring/1.png')
         },
         {
           id: 10,
-          name: 'PETITE MELROSE',
-          price: 1290,
+          name: 'ELAN DUAL RING',
+          price: 590,
           color: '玫瑰金色',
           src: require('../../assets/ring/2.png')
         },
         {
           id: 11,
-          name: 'PETITE ROSELYN',
-          price: 1090,
+          name: 'ELAN TRIAD RING',
+          price: 690,
           color: '玫瑰金色',
           src: require('../../assets/ring/3.png')
         },
         {
           id: 12,
-          name: 'PETITE BRISTOL',
-          price: 1190,
+          name: 'CLASSIC RING',
+          price: 390,
           color: '玫瑰金色',
           src: require('../../assets/ring/4.png')
         },
         {
           id: 13,
-          name: 'PETITE BRISTOL',
-          price: 1190,
-          color: '玫瑰金色',
+          name: 'CLASSIC RING SATIN WHITE',
+          price: 490,
+          color: '玫瑰金色/绸缎白',
           src: require('../../assets/ring/5.png')
         },
         {
           id: 14,
-          name: 'PETITE BRISTOL',
-          price: 1190,
-          color: '玫瑰金色',
+          name: 'CLASSIC RING SATIN WHITEL',
+          price: 490,
+          color: '银色/绸缎白',
           src: require('../../assets/ring/6.png')
         },
         {
           id: 15,
-          name: 'PETITE BRISTOL',
-          price: 1190,
-          color: '玫瑰金色',
+          name: 'CLASSIC RING DUSTY ROSE',
+          price: 490,
+          color: '玫瑰金色/蔷薇粉',
           src: require('../../assets/ring/7.png')
         },
         {
           id: 16,
-          name: 'PETITE BRISTOL',
-          price: 1190,
-          color: '玫瑰金色',
+          name: 'CLASSIC RING DESERT SAND',
+          price: 490,
+          color: '玫瑰金色/晨雾灰',
           src: require('../../assets/ring/8.png')
         }
       ],
       product2: [
         {
           id: 17,
-          name: 'CLASSIC SHEFFIELD',
-          price: 1380,
+          name: 'ELAN BRACELET',
+          price: 690,
           color: '玫瑰金色',
           src: require('../../assets/hand/1.png')
         },
         {
           id: 18,
-          name: 'PETITE MELROSE',
-          price: 1380,
+          name: 'CLASSIC BRACELET',
+          price: 590,
           color: '玫瑰金色',
           src: require('../../assets/hand/2.png')
         },
         {
           id: 19,
-          name: 'PETITE ROSELYN',
-          price: 1690,
-          color: '玫瑰金色',
+          name: 'CLASSIC SLIM BRACELET SATIN WHITE',
+          price: 690,
+          color: '玫瑰金色/绸缎白',
           src: require('../../assets/hand/3.png')
         },
         {
           id: 20,
-          name: 'PETITE BRISTOL',
-          price: 1350,
+          name: 'CLASSIC BRACELET CHERRY BLUSH',
+          price: 690,
           color: '玫瑰金色',
           src: require('../../assets/hand/4.png')
         }

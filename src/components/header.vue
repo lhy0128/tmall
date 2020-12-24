@@ -16,20 +16,6 @@
     <el-menu-item index="2-1">ICONIC MOTION</el-menu-item>
     <el-menu-item index="2-2">和平精英限定款</el-menu-item>
     <el-menu-item index="2-3">全新饰品</el-menu-item>
-    <!-- <el-menu-item index="2-4">家具家电</el-menu-item>
-    <el-menu-item index="2-5">家庭清洁</el-menu-item>
-    <el-menu-item index="2-6">母婴用品</el-menu-item>
-    <el-menu-item index="2-7">生活用品</el-menu-item>
-    <el-submenu index="2-8">
-      <template slot="title">食品饮料</template>
-      <el-menu-item index="2-8-1">牛奶</el-menu-item>
-      <el-menu-item index="2-8-2">坚果</el-menu-item>
-      <el-menu-item index="2-8-3">饼干</el-menu-item>
-      <el-menu-item index="2-8-4">方便面</el-menu-item>
-      <el-menu-item index="2-8-5">粮油</el-menu-item>
-      <el-menu-item index="2-8-6">酒类</el-menu-item>
-      <el-menu-item index="2-8-7">糖果/巧克力</el-menu-item> -->
-    <!-- </el-submenu> -->
   </el-submenu>
   <el-submenu index="3">
     <template slot="title">腕表</template>
@@ -87,7 +73,6 @@
 </template>
 
 <script>
-// import { mapGetters, mapState } from 'vuex'
 export default {
   // props: ['login'],
   data () {
@@ -96,14 +81,10 @@ export default {
       isLogin: false
     }
   },
-  // computed: {
-  //   ...mapState({
-  //     username: state => state.user.username
-  //   }),
-  //   ...mapGetters('user', { isLogin: 'isLogin' })
-  // },
+
   created () {
     this.getUsername()
+    // this.reload()
   },
   methods: {
     getUsername () {
@@ -115,9 +96,21 @@ export default {
       }
       console.log(this.user)
     },
+    // reload () {
+    //   `$route`.go(0)
+    // },
     remove () {
       sessionStorage.removeItem('user')
     }
+  },
+  // computed: {
+  //   reload () {
+  //     return window.reload()
+  //   }
+  // },
+  watch: {
+    // 如果路由有变化，会再次执行该方法
+    '$route': 'getUsername'
   }
 
 }

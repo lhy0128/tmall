@@ -54,6 +54,11 @@
       "name": "123",
       "password": "11111",
       "id": "7WG9mtQ"
+    },
+    {
+      "name": "wqw",
+      "password": "111111",
+      "id": "ad-dfPV"
     }
   ],
   "productinfo": [
@@ -498,8 +503,8 @@
     },
     {
       "id": "9",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
+      "name": "ELAN RING",
+      "price": 490,
       "color": "玫瑰金色",
       "size": "默认",
       "imgList": [
@@ -514,10 +519,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
         }
       ],
       "disPlay": [
@@ -532,14 +533,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
-        },
-        {
-          "id": "5",
-          "imgName": "5.png"
         }
       ],
       "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
@@ -547,9 +540,9 @@
     },
     {
       "id": "10",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
-      "color": "#ccc",
+      "name": "ELAN DUAL RING",
+      "price": 590,
+      "color": "玫瑰金色",
       "size": "默认",
       "imgList": [
         {
@@ -563,10 +556,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
         }
       ],
       "disPlay": [
@@ -581,22 +570,14 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
-        },
-        {
-          "id": "5",
-          "imgName": "5.png"
         }
       ],
       "message": "product1"
     },
     {
       "id": "11",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
+      "name": "ELAN TRIAD RING",
+      "price": 690,
       "color": "玫瑰金色",
       "size": "默认",
       "imgList": [
@@ -629,14 +610,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
-        },
-        {
-          "id": "5",
-          "imgName": "5.png"
         }
       ],
       "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
@@ -644,8 +617,8 @@
     },
     {
       "id": "12",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
+      "name": "CLASSIC RING",
+      "price": 390,
       "color": "玫瑰金色",
       "size": "默认",
       "imgList": [
@@ -678,14 +651,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
-        },
-        {
-          "id": "5",
-          "imgName": "5.png"
         }
       ],
       "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
@@ -693,9 +658,9 @@
     },
     {
       "id": "13",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
-      "color": "玫瑰金色",
+      "name": "CLASSIC RING SATIN WHITE",
+      "price": 490,
+      "color": "玫瑰金色/绸缎白",
       "size": "默认",
       "imgList": [
         {
@@ -727,14 +692,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
-        },
-        {
-          "id": "5",
-          "imgName": "5.png"
         }
       ],
       "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
@@ -742,9 +699,9 @@
     },
     {
       "id": "14",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
-      "color": "玫瑰金色",
+      "name": "CLASSIC RING SATIN WHITE",
+      "price": 490,
+      "color": "银色/绸缎白",
       "size": "默认",
       "imgList": [
         {
@@ -776,14 +733,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
-        },
-        {
-          "id": "5",
-          "imgName": "5.png"
         }
       ],
       "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
@@ -791,9 +740,9 @@
     },
     {
       "id": "15",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
-      "color": "玫瑰金色",
+      "name": "CLASSIC RING DUSTY ROSE",
+      "price": 490,
+      "color": "玫瑰金色/蔷薇粉",
       "size": "默认",
       "imgList": [
         {
@@ -825,14 +774,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
-        },
-        {
-          "id": "5",
-          "imgName": "5.png"
         }
       ],
       "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
@@ -840,9 +781,9 @@
     },
     {
       "id": "16",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
-      "color": "玫瑰金色",
+      "name": "CLASSIC RING DESERT SAND",
+      "price": 490,
+      "color": "玫瑰金色/晨雾灰",
       "size": "默认",
       "imgList": [
         {
@@ -874,14 +815,6 @@
         {
           "id": "3",
           "imgName": "3.png"
-        },
-        {
-          "id": "4",
-          "imgName": "4.png"
-        },
-        {
-          "id": "5",
-          "imgName": "5.png"
         }
       ],
       "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
@@ -889,8 +822,45 @@
     },
     {
       "id": "17",
-      "name": "PETITE ROSELYN",
-      "price": 1090,
+      "name": "ELAN BRACELET",
+      "price": 690,
+      "color": "玫瑰金色",
+      "size": "默认",
+      "imgList": [
+        {
+          "id": "1",
+          "imgName": "1.png"
+        },
+        {
+          "id": "2",
+          "imgName": "2.png"
+        },
+        {
+          "id": "3",
+          "imgName": "3.png"
+        }
+      ],
+      "disPlay": [
+        {
+          "id": "1",
+          "imgName": "1.png"
+        },
+        {
+          "id": "2",
+          "imgName": "2.png"
+        },
+        {
+          "id": "3",
+          "imgName": "3.png"
+        }
+      ],
+      "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story": "DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
+    },
+    {
+      "id": "18",
+      "name": "CLASSIC BRACELET",
+      "price": 590,
       "color": "玫瑰金色",
       "size": "默认",
       "imgList": [
@@ -923,14 +893,84 @@
         {
           "id": "3",
           "imgName": "3.png"
+        }
+      ],
+      "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story": "DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
+    },
+    {
+      "id": "19",
+      "name": "CLASSIC SLIM BRACELET SATIN WHITE",
+      "price": 690,
+      "color": "玫瑰金色/绸缎白",
+      "size": "默认",
+      "imgList": [
+        {
+          "id": "1",
+          "imgName": "1.png"
+        },
+        {
+          "id": "2",
+          "imgName": "2.png"
+        },
+        {
+          "id": "3",
+          "imgName": "3.png"
+        }
+      ],
+      "disPlay": [
+        {
+          "id": "1",
+          "imgName": "1.png"
+        },
+        {
+          "id": "2",
+          "imgName": "2.png"
+        },
+        {
+          "id": "3",
+          "imgName": "3.png"
+        }
+      ],
+      "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",
+      "story": "DANIEL WELLINGTON 品牌诞生源于一次跨越半个世界的巧遇：在旅行途中，品牌创始人 FILIP TYSANDER 遇见一位迷人的英国绅士，他的着装风格低调简约，喜爱佩戴一款古董手表，表带则是斑驳的尼龙表带。这位迷人的绅士名字便叫DANIEL WELLINGTON。受这位新朋友的经典格调启发，FILIP 决定创建自己的腕饰品牌。其以时尚简约的腕表与配饰闻名，设计简洁优雅，经典隽永并适合各种场合穿搭，深受消费者喜爱，让品牌在业界独树一帜。"
+    },
+    {
+      "id": "20",
+      "name": "CLASSIC BRACELET CHERRY BLUSH",
+      "price": 690,
+      "color": "玫瑰金色",
+      "size": "默认",
+      "imgList": [
+        {
+          "id": "1",
+          "imgName": "1.png"
+        },
+        {
+          "id": "2",
+          "imgName": "2.png"
+        },
+        {
+          "id": "3",
+          "imgName": "3.png"
         },
         {
           "id": "4",
           "imgName": "4.png"
+        }
+      ],
+      "disPlay": [
+        {
+          "id": "1",
+          "imgName": "1.png"
         },
         {
-          "id": "5",
-          "imgName": "5.png"
+          "id": "2",
+          "imgName": "2.png"
+        },
+        {
+          "id": "3",
+          "imgName": "3.png"
         }
       ],
       "message": "CLASSIC系列腕表，经典而永恒的简约设计，满足日常搭配的同时，给你增加精致细节，驾驭百变风格。",

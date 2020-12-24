@@ -90,9 +90,11 @@ export default {
                   // 登陆成功，避免刷新后无登录信息
                   // console.log(res.data.data)
                   // localStorage.setItem('user', JSON.stringify(loginParams))
+                  // this.$store.commit('user/setUser', loginParams.username)
                   sessionStorage.setItem('user', loginParams.username)
                   // this.$auth.setAuthorization(index)
                   this.$router.push({ path: '/home' })
+                  // window.reload()
                   this.logining = true
                 }
               }
